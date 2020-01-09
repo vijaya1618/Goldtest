@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING/DTD BEAN/EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+ 
+<beans>
+<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+    <property name="resourceRef" value="true" />
+		<property name="jndiName" value="jdbc/Team8" />
+		<property name="lookupOnStartup" value="true" />
+</bean>
+ 
+
+
+<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> 
+    <property name="dataSource">
+        <ref bean="dataSource"/>
+    </property>
+</bean>
+
+<bean id="taskDAOTarget" class="com.pennanttech.Register.RegisterDaoImpl">
+    <property name="dataSource" ref="dataSource" />
+</bean>
+ 
+	<bean id="taskDAO" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"> 
+        <property name="transactionManager"> 
+            <ref bean="transactionManager"/> 
+        </property> 
+        <property name="target"> 
+            <ref bean="taskDAOTarget"/> 
+        </property> 
+        <property name="transactionAttributes"> 
+            <props> 
+                <prop key="insert*">PROPAGATION_REQUIRED, ISOLATION_READ_COMMITTED</prop>
+                <prop key="update*">PROPAGATION_REQUIRED, ISOLATION_READ_COMMITTED</prop> 
+                <prop key="delete*">PROPAGATION_REQUIRED, ISOLATION_READ_COMMITTED</prop>
+                <prop key="find*">PROPAGATION_REQUIRED, ISOLATION_READ_COMMITTED, readOnly</prop> 
+            </props> 
+        </property>
+    </bean> 
+</beans>

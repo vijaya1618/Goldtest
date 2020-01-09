@@ -1,0 +1,146 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk  xmlns:ca="client/attribute">
+<style src="Style.css"></style>
+<style>
+.heading{
+margin-right:155px;
+color: rgba(0,0,0,0.57);
+font-size: 50px;
+}
+</style>
+<div>
+<window border="normal" class="window" >
+<div id="print" use="com.pennanttech.CustInfo.PrintCustomerDetailsCntrl">
+<div align="center">
+<hbox>
+
+<image src="../logo.png" width="150px" height="110px" style="float:left;margin-right:46px"/>
+<vbox>
+<div>
+   <label value="Penn Finance" sclass="heading"/>
+</div>
+</vbox>
+</hbox>
+</div>
+<separator height="25px"/>	
+<div align="center">
+<listbox id="life" width="700px">
+<listhead>
+<listheader  width="12%"/>
+<listheader width="15%"/>
+<listheader width="12%"/>
+<listheader width="15%"/>
+</listhead>
+	<listitem>
+		<listcell label="Customer Details" style="font-size:24px;font-style:bold;" ca:colspan="4" />
+	</listitem>
+	<listitem>
+		<listcell label="Customer Id" />
+		<listcell label="" id="customer_id"/>
+	</listitem>
+
+	
+	<listitem>
+		<listcell label="Customer Name" style="font-colour:red;" />
+		<listcell label="" id="customer_name"/>
+	</listitem>
+	<listitem>
+		<listcell label="Gender" />
+		<listcell label="" id="gender"/>
+	</listitem>
+	<listitem>
+		<listcell label="Date of Birth" />
+		<listcell label="" id="dob" />
+	</listitem>
+	<listitem>
+		<listcell label="Mobile Number 1" />
+		<listcell label="" id="mobile1" />
+		<listcell label="Mobile Number 1" />
+		<listcell label="" id="mobile2"/>
+	</listitem>
+	<listitem>
+		<listcell label="Profession" />
+		<listcell label="" id="profession"/>
+		<listcell label="Income" />
+		<listcell label="" id="income"/>
+	</listitem>
+	<listitem>
+		<listcell label="Aadhar Number" />
+		<listcell label="" id="aadhar"/>
+		<listcell label="Pan ID" />
+		<listcell label="" id="pan"/>
+	</listitem>
+	<listitem>
+		<listcell label="Address1" />
+		<listcell label="" id="address1" />
+		<listcell label="Address2" />
+		<listcell label="" id="address2" />
+	</listitem>
+	<listitem>
+		<listcell label="Vehicle Details" style="font-size:24px;font-style:bold;" ca:colspan="4" />
+	</listitem>
+	<listitem>
+		<listcell label="Vehicle Id" />
+		<listcell label="" id="vehicle_id" />
+	</listitem>
+
+	<listitem>
+		<listcell label="Vehicle Type" />
+		<listcell label=""  id="vehicle_type"/>
+	</listitem>
+	<listitem>
+		<listcell label="Vehicle Amount" />
+		<listcell label="" id="vehicle_amount" />
+	</listitem>
+
+	</listbox>
+	</div>
+	<div height="50px"></div>	
+<div align="center">
+<button label="Print" style="align:center" onClick="Clients.print()">
+          	</button>
+          	
+          	<button label="Cancel" onClick="print.cancel()"></button>
+</div>
+</div>
+</window>
+</div>
+
+
+<script type="text/javascript"><![CDATA[
+            function printContent (divId) {
+                // open a new window
+                var mywindow = window.open('', '', 'height=400,width=600'),
+                    mwindoc = mywindow? mywindow.document : null;
+                // write content to new window
+                mwindoc.write('<html><head><title>my div</title>');
+                var links = document.getElementsByTagName('head')[0].getElementsByTagName('link'),
+                    i;
+
+                // add styles to new window
+                for (i = 0; i < links.length; i++) {
+                    var link = links[i],
+                        lcnt = '<link'
+                            + (link.rel? ' rel="'+link.rel+'"' : '')
+                            + (link.type? ' type="'+link.type+'"' : '')
+                            + (link.href? ' href="'+link.href+'"' : '')
+                            + ' />';
+                    //alert(lcnt);
+                    mwindoc.write(lcnt);
+                }
+                mwindoc.write('</head><body >');
+                // add contents to print to new window
+                // the divId is the assigned div id
+                mwindoc.write(jq('$'+divId)[0].innerHTML);
+                mwindoc.write('</body></html>');
+
+                // call print function then close the new window
+                mywindow.document.close();
+                mywindow.focus();
+                mywindow.print();
+                mywindow.close();
+
+                return true;
+            }
+        ]]></script>
+</zk>

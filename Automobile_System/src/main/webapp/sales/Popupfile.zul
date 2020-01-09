@@ -1,0 +1,46 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window   border="normal" id="wincheck"  apply="com.pennanttech.CustInfo.Popupcontroller">
+        <borderlayout width="600px" height="650px" >
+ <north>
+        <div style="background:pink" align="center">Terms and Conditions</div>
+  </north>
+ <center>   
+     <div  width="550px" height="1150px" > ⦿  Please read these Terms and Conditions  carefully before buying the product.<separator/>
+⦿ Your access to and use of the Service is conditioned on your acceptance of and compliance with these Terms.<separator/>
+⦿ These Terms apply to all visitors, users and others who access or use the Service.
+
+By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of the terms then you may not access the Service. <separator/>
+
+⦿ When you decide on the vehicle that suits you, you need to fill in an application and give us any other documents or information we require to assess the application. <separator/>
+⦿ If we issue an approval, we agree to provide a loan up to the limit. The limit may be different to the limit you asked for in your application. We
+   may cancel or vary the limit at any time. <separator/>
+
+ ⦿ Tenure shouldn't be less than 12 months.<separator/>
+
+ ⦿ Rate of Interest will be of minimum 8% per annum.<separator/>
+
+
+ ⦿ Generally, you don’t need a guarantor for a car loan. However, you may need a guarantor if you don’t fulfill the eligibility criteria. 
+   For example, if your annual income is lower than the bank’s criteria, the may ask you to furnish a guarantor. <separator/>
+
+
+⦿ If we issue an approval, we agree to provide a loan up to the limit. The limit may be different to the limit you asked for in your application. We
+   may cancel or vary the limit at any time.
+
+          </div>
+ </center>
+ <south>
+ <div>
+ <hbox>
+		<checkbox label="I accept the terms and conditions" id="checkboxes" />
+</hbox>
+		<space width="180px"></space>
+				<button label="submit" id="subpopup" apply="com.pennanttech.CustInfo.Popupcontroller"></button>
+				<space width="40px"></space>
+				<button label="cancel" id="subpopup1" apply="com.pennanttech.CustInfo.Popupcontroller"></button>
+</div>
+</south>
+</borderlayout>
+</window>
+</zk>

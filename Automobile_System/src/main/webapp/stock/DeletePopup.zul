@@ -1,0 +1,16 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+<window id="win" border="normal" use="com.pennanttech.Empmodifications.ViewPageCntl">
+<vlayout>
+	<hlayout>
+		<label>ARE U SURE WANT TO DELETE</label>
+		<textbox id="vehicleid" value="${arg.vehicleid}"/>
+	</hlayout>
+	<hlayout style="margin-left:300px">
+		<button id="del" label="YES" onClick="win.deletestock()"/>
+		<button id="cnl" label="NO"/>
+	</hlayout>
+</vlayout>
+</window>
+</zk>

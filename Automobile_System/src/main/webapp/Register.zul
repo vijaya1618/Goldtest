@@ -1,0 +1,160 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+	<style>
+		body { color: rgba(255, 255, 255, 0.9); } .z-label{ color:white;
+		}
+
+		.z-window{ padding:0px; }
+
+		.register{ background-image:url('ca.jpg');
+		background-repeat:no-repeat; background-size: cover;
+		width:1450px; height:770px;}
+
+		.slide,.submit {margin-left:110px; margin-right:80px;
+		margin-top:20px; background-color:#3b3733; }
+		
+		.z-button {
+    margin-left: -28px;
+    margin-right: 66px;
+    margin-top: 21px;
+    background-color: #3b3733;
+}
+		.slide:hover,.z-button:hover {background-color:#3b3733;
+		color:white; }
+
+		.boxing{border-radius:4px; float:left;
+		margin-top:40px;margin-left:382px; text-color:red;background:
+		rgba(0, 0, 0, 0.48); padding:30px; box-shadow: 2px 2px 10px;}
+
+		.sun{ width:40%; height:65%; margin-left:10px;}
+
+		.hbox{ margin-left:200px;
+		margin-bottom:10px;color:black;font-weight:bold"}
+
+		.xyz{ color:white; } .z-a:visited { color: #fcfdff; }
+
+
+		.xyz:hover{ color:#33ccff; }
+
+
+		.z-textbox, .z-decimalbox,.z-intbox, .z-longbox, .z-doublebox {
+
+		font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+		font-size: 16px; font-weight:normal; font-style: normal; height:
+		34px; border: 1px solid #ffffff;color: white;} .z-textbox:select
+		{background-color:#3b3733; }
+
+	</style>
+
+
+	<div id="register" sclass="register" height="740px"
+		use="com.pennanttech.Register.RegistrationCntl">
+		<image src="/resources/images/logo.png" width="220px"
+			height="170px" style="margin-left: -950px; margin-top:20px;">
+		</image>
+		<vbox sclass="boxing"
+			style="margin-right:50px;margin-top:100px">
+			<hbox sclass="hbox">Register Here</hbox>
+			<space height="15px"></space>
+			<hbox>
+				<label value="Username:" />
+				<space width="190px"></space>
+				<textbox tabindex="1" id="usr" width="200px"
+					constraint="no empty" style="background:transparent;color:white;" />
+
+			</hbox>
+			<hbox>
+				<label value="Fullname:" />
+				<space width="198px"></space>
+
+				<textbox tabindex="2" id="fname" width="200px"
+					constraint="no empty" style="background:transparent;color:white;" />
+			</hbox>
+			<hbox>
+				<label value="Password:" />
+				<space width="193px"></space>
+				<textbox type="password" tabindex="3" id="password" onChange="register.validate()"
+				constraint="no empty"  maxlength="15" width="200px"
+					style="background:transparent;color:white;" />
+			</hbox>
+			<label id="c"></label>
+
+			<hbox>
+				<label value="E-mail:" />
+				<space width="218px"></space>
+				<textbox id="email" tabindex="5" width="200px"
+					constraint="/.+@.+\.[a-z]+/: Please enter an valid e-mail address"
+					style="background:transparent;color:white;" />
+			</hbox>
+			<hbox>
+				<label value="Phone:" />
+				<space width="218px"></space>
+				<longbox constraint="no empty" maxlength="10"
+					tabindex="6" id="phn" width="200px"
+					style="background:transparent;color:white;" />
+			</hbox>
+			<hbox>
+				<label value="DOB:" />
+				<space width="228px"></space>
+				<hbox>
+					<datebox id="dob" tabindex="7" width="200px"
+						constraint="between 19700101 and 20021231,no empty"
+						style="background:transparent;color:white;" />
+				</hbox>
+			</hbox>
+			<hbox>
+				<label value="Gender:" />
+				<space width="210px"></space>
+				<combobox id="gender" tabindex="8" width="200px"
+					style="background:transparent;color:white;">
+					<comboitem label="Male" value="Male" />
+					<comboitem label="Female" value="Female" />
+				</combobox>
+			</hbox>
+			<hbox>
+				<label value="Department:" />
+				<space width="180px"></space>
+				<combobox id="dept" tabindex="9" width="200px"
+					style="background:transparent;color:white;">
+					<comboitem label="Sales" value="Sales" />
+					<comboitem label="Payment" value="Payments" />
+				</combobox>
+			</hbox>
+			<hbox>
+				<label value="**Choose Your Security Question?" />
+				<space width="24px"></space>
+				<combobox id="question" tabindex="9" width="200px"
+					style="background:transparent;color:white;">
+					<comboitem label="What Is your favorite book?"
+						value="Sales" />
+					<comboitem label="What city were you born in?"
+						value="Payments" />
+
+
+				</combobox>
+			</hbox>
+			<hbox>
+				<label value="**Answer:" />
+				<space width="198px"></space>
+				<textbox id="answer" constraint="no empty"
+					style="background:transparent;color:white;" width="200px" />
+			</hbox>
+
+			<hlayout>
+
+				<button label="Submit" id="submit" sclass="submit"
+					style="margin-left:200px;" onClick="register.submit()" />
+
+			</hlayout>
+			<hbox>
+				<a href="/Login.zul">
+					<label value="Already have an Account Login here.."
+						style="color:white;text-decoration:none;" />
+				</a>
+			</hbox>
+		</vbox>
+
+	</div>
+
+</zk>

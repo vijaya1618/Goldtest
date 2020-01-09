@@ -1,0 +1,43 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<style>
+		.container { height: 100%; width: 100%; display: flex; position:
+		center; align-items: center; justify-content: center; }
+		.z-listheader { border-left: 1px solid #f2f2f2; border-bottom:
+		0px solid #f2f2f2; } .z-listbox-header-border { border-bottom:
+		1px solid #f2f2f2; } .z-listhead-bar { border-left: 1px solid
+		#f2f2f2; border-bottom: 1px solid #f2f2f2; }
+		 .z-listhead-bar {
+    border-left: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+}
+	</style>
+	<space height="30px"></space>
+	<div align="center" id="viewemployees" 
+		use="com.pennanttech.Empmodifications.ViewEmpCntl" width="400px"
+		style="margin-left:25px;">
+		<vbox>
+			<listbox id="employees" sizedByContent="true" mold="paging" pageSize="10" >
+				<listhead>
+					<listheader label="UserId" width="100px"
+						style="background-color:#565656;" />
+					<listheader label="UserName" width="130px"
+						style="background-color:#565656;" />
+					<listheader label="FullName" width="150px"
+						style="background-color:#565656;" />
+					<listheader label="MobileNo" width="150px"
+						style="background-color:#565656;" />
+					<listheader label="Gender" width="120px"
+						style="background-color:#565656;" />
+					<listheader label="Email" width="150px"
+						style="background-color:#565656;" />
+					<listheader label="Department" width="130px"
+						style="background-color:#565656;" />
+				   <listheader label="Date Of Birth" width="130px"
+						style="background-color:#565656;" />
+
+				</listhead>
+			</listbox>
+		</vbox>
+	</div>
+</zk>

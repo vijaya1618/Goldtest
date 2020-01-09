@@ -1,0 +1,90 @@
+<zk>
+
+ <style>
+ .z-image
+ {
+ 	  width: 150px;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+ }
+ .label
+ {
+ color:white;
+ font-weight:bold;
+ font-size:29px;
+ font-family:Trebuchet MS;
+ }
+ .z-north-body, .z-south-body, .z-west-body, .z-east-body {
+    line-height: 16px;
+    padding: 0px;
+    color: rgba(0,0,0,0.9);
+   background:#565656;
+}
+   .z-row-content{
+   background:#565656;
+}
+.label {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Trebuchet MS;
+}
+.aaa{
+font-family: TrebuchetMS;
+    font-size: 26px;
+    font-weight: bold;
+       margin-left: -53px;
+     color:#ffffff;
+    font-style:italic;
+}
+
+ </style>
+ 
+ <div height="100%"  apply="org.zkoss.bind.BindComposer">
+ <borderlayout>
+ <north id="n" size="100px" border="0" height="120px">
+	 <div>
+			<image src="/resources/images/logo1.png" width="220px" height="130px" style="padding-left:20px;"></image>
+			<space width="500px"></space>
+			<label style="color:white;font-weight:bold;font-size:20px;" sclass="aaa">PENN FINANCE</label> 
+			<div style="float:right;margin-top:50px;margin-right:20px;border-radius:8px;" >
+				    <div >
+					   <menubar id="menubar" width="100%">
+				        <menu label="${username}" style="background-color:pink;color:white">
+				         <menupopup>
+				              <menuitem label="logout" id="logout" iconSclass="z-icon-power-off fa-5x" apply="com.pennanttech.Empmodifications.EmpmodificationCntl"/>
+				         </menupopup>
+				        </menu>
+				       </menubar>
+				    </div>
+				 </div>
+	 </div>	
+</north>
+ <west  width="15%">
+   <grid>
+   
+    <rows style="cursor:pointer">      
+       <row>
+        	<label sclass="label" id="downpayment" value="Down Payment" apply="com.pennanttech.Paymentmethods.PaymentCntl"/>
+       </row>
+        <row>
+        	<label sclass="label" id="fullpayment" value="Full Payment" apply="com.pennanttech.Paymentmethods.PaymentCntl"/>
+        </row>
+        <row>
+         	<label sclass="label" id="emipayment" value="Emi Payment" apply="com.pennanttech.Paymentmethods.PaymentCntl"/>
+        </row>
+         <row>
+        	<label sclass="label" id="viewpayment"  value="View Payment" apply="com.pennanttech.Paymentmethods.PaymentCntl"/>
+       </row>
+        <row>
+        	<label sclass="label" id="viewschedule"  value="View Schedule" apply="com.pennanttech.Paymentmethods.PaymentCntl"/>
+       </row>
+    </rows>
+   </grid>
+ </west>
+ <center style="background:transparent;background-image:url('../auto6.jpg');background-repeat: no-repeat;background-size:100% 100%;"> 
+  		<include src="" id="payments"/>
+ </center>
+</borderlayout>
+</div>
+</zk>          

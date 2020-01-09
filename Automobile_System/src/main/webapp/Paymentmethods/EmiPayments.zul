@@ -1,0 +1,59 @@
+<zk>
+	<style>
+		.z-center-body, { line-height: 66px; padding: 16px; color:rgba(0,0,0,0.9); }
+		.z-label{ color:white; }
+		.z-window{padding:0px;}
+		.register{align:center; text-color:white; }
+		.slide,.z-button {margin-left:110px; margin-right:80px;margin-top:16px;background-color:#3b3733; }
+		.slide:hover,.z-button:hover {background-color:#3b3733;color: white; } 
+		.boxing{ border-radius:4px;float:left; margin-top: 30px; margin-left: 365px;text-color:white; background: #3333338a; padding:30px;box-shadow: 2px 2px 10px; } 
+		.sun{ width: 40%;height: 65%;margin-left:10px;}
+		.hbox{ margin-left:100px; margin-bottom:10px;color:black; }
+		.xyz{ color:white; }
+		.xyz:hover{ color:#33ccff; }
+		.z-vbox-separator td {line-height: 1;}
+
+	</style>
+	<div sclass="container">
+		<div id="payment" use="com.pennanttech.Finance.PaymentsCntrl">
+		</div>
+
+		<vbox sclass="boxing">
+			<hbox sclass="hbox">EMI PAYMENT</hbox>
+			<hbox>
+				<label value="Customer ID" />
+				<space width="50px"></space>
+				<intbox width="150px" id="customer_id"
+					onChange="payment.vehicleid()" maxlength="5" />
+			</hbox>
+
+			<hbox>
+				<label value="Vehicle ID" />
+				<space width="68px"></space>
+				<intbox width="150px" id="vehicle_id" />
+			</hbox>
+
+			<hbox>
+				<label value="Payment ID" />
+				<space width="55px"></space>
+				<intbox width="150px" id="Payment_id" />
+			</hbox>
+			<hbox>
+				<label value="EMI" />
+				<space width="112px"></space>
+				<doublebox width="150px" id="emi" />
+			</hbox>
+			<hbox>
+				<label>Cash Pay</label>
+				<space width="70px"></space>
+				<doublebox id="cash_pay" width="150px" />
+			</hbox>
+			<hlayout>
+				<div class="b_align">
+					<button id="pay" label="PAY"
+						onClick="payment.payEMI()" />
+				</div>
+			</hlayout>
+		</vbox>
+	</div>
+</zk>

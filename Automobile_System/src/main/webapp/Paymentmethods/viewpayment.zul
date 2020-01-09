@@ -1,0 +1,46 @@
+<zk>
+	<style>
+		.container { height: 100%; width: 100%; display: flex; position:
+		center; align-items: center; justify-content: center; }
+		.z-listheader {
+    border-left: 1px solid #f2f2f2;
+    border-bottom: 0px solid #f2f2f2;
+    }
+    .z-listbox-header-border {
+    border-bottom: 1px solid #f2f2f2;
+    }
+    .z-listhead-bar {
+    border-left: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+}
+	</style>
+
+	<window width="100%" border="normal" style="background:transparent;">
+		<div id="Payments1" align="center" use="com.pennanttech.Payments.ViewPaymentsCntrl">
+			<hbox align="center">
+				Customer_Id:
+				<intbox id="customerid"/>
+				<button id="changeBtn"  label="Search" onClick="Payments1.change()" style="background-color:#565656;"/>
+
+			</hbox>
+			<listbox height="500px" style="margin-top:10px;" sizedByContent="true"
+				id="payments" emptyMessage="No results found for your id"  mold="paging" pageSize="10">
+				<listhead >
+					<listheader label="PaymentId"  style="background-color:#565656;" />
+					<listheader label="PaymentType" style="background-color:#565656;" />
+					<listheader label="CustomerId" style="background-color:#565656;" />
+					<listheader label="VehicleId"  style="background-color:#565656;"/>
+					<listheader label="VehicleAmount" style="background-color:#565656;" />
+					<listheader label="LoanTenure"  style="background-color:#565656;"/>
+					<listheader label="ROI" style="background-color:#565656;"/>
+					<listheader label="PaidAmount" style="background-color:#565656;"/>
+					<listheader label="PrincipleAmount" style="background-color:#565656;" />
+					<listheader label="PaymentDate"  style="background-color:#565656;"/>
+					<listheader label="EMI" style="background-color:#565656;" />
+                </listhead>
+                
+			</listbox>
+		</div>
+	</window>
+
+</zk>

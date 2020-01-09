@@ -1,0 +1,113 @@
+<zk>
+
+<style>
+
+.z-vbox{
+    background: cornsilk;
+    margin-left: 20px;
+    padding-bottom:10px;
+    margin-bottom:10px;
+    
+}
+.align
+{
+	width:245px;
+	height:238px;	
+}
+
+.prodname
+{ 
+	margin-left:32px;
+	font-size:15px;
+	font-family:TimesNewRoman;	
+}
+.prodcost{
+     margin-left:30px;
+     font-size:15px;
+  
+     font-family:italic;
+     font-color:blue;
+     
+}
+.prodyear{
+   
+    margin-left:30px;
+    width:70px;
+    font-size:15px;
+   font-family:italic
+   font-color:light-blue;
+}
+.buybutton{
+      
+	margin-left:86px;
+    background-color: #565656;
+
+}
+.buybutton:hover{
+    background-color: #565656;
+
+}
+.z-center-body {
+    padding: 0px;
+    
+}
+.subdiv:hover{
+ box-shadow: 5px 5px 11px 2px grey;
+ 
+}
+.aaa{
+font-family: TrebuchetMS;
+    font-size: 26px;
+    font-weight: bold;
+    margin-left:400px;
+     color:#ffffff;
+    font-style:italic;
+}
+.z-menubar {
+    display: block;
+    border-top: 0px;
+    border-bottom: 0px;
+    padding: 0px;
+    background: #ffffff;
+}
+
+</style>
+
+<borderlayout id="b" vflex="1"  >
+<north id="n" size="100px" height="130px"  style="background:#2c3e50" >
+	<div >
+	  <div style="float:left"><image src="/resources/images/logo1.png" height="128px" width="185px"/>
+	   	
+	  </div>
+	  <div style="float:center;padding-top:40px;"><label value="PENN FINANCE" sclass="aaa"/></div>
+	  <div style="float:right;" >
+   
+   
+	   <menubar id="menubar" width="100%">
+        <menu label="${username}" style="background-color:pink;color:white">
+         <menupopup>
+              <menuitem label="logout" id="logout" iconSclass="z-icon-power-off fa-5x" apply="com.pennanttech.Empmodifications.EmpmodificationCntl"/>
+         </menupopup>
+        </menu>
+       </menubar>
+       </div>
+		
+		<image style="padding:0 10px;"/>
+		<label style="position:relative; padding-left: 50px; font-size:24px;color:#008BB6;font-weight:bold;"/>
+	</div>
+</north>
+     
+
+<!-- Sidebar -->
+     <center  style="overflow:auto;background-color:cornsilk" >
+		
+				
+	<div  use="com.pennanttech.CustInfo.ProductDisplayCntrl"  >
+	<vbox id="sample">
+	    <separator>   </separator>
+       </vbox>      
+       </div> 
+     </center>
+ </borderlayout>
+ 
+</zk>

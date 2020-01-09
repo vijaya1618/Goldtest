@@ -1,0 +1,113 @@
+<zk>
+	<style>
+		.z-label{ color:white; } .z-window{ padding:0px; } .register{
+
+		align:center; text-color:#fffbfa; } element.style {
+		padding-left: 566px; } .slide{ margin-left:80px;
+		margin-right:100px; margin-top:30px; font-color:black;
+		background-color:; } .boxing{ border-radius:4px; float:left;
+		margin-top:86px; margin-bottom: 13px; margin-left:522px;
+		text-color:white; background: rgba(0, 0,0, 0.3); padding:30px;
+		box-shadow: 2px 2px 10px; width:75px; } .sun{ width: 40%;
+		height: 65%; margin-left:10px;
+
+		}
+
+		.b_align{ margin-left:179px; }
+
+		.hbox{ margin-left:120px; margin-bottom:80px;
+
+		color:black; } .xyz{ color:white; } .xyz:hover{ color:#33ccff; }
+		.z-hbox,.z-hlayout
+		{
+			margin-top: 15px;
+			margin-left: 33px;
+		}
+	</style>
+
+
+	<div align="center" id="produpdate"
+		use="com.pennanttech.ProdInfo.ProdCntrl">
+		<vbox sclass="boxing"
+			style="margin-left:350px;margin-top:25px;">
+
+			<label
+				style="padding-left:150px;font-weight:bold;font-size:25px;">
+				UPDATE STOCK
+			</label>
+			<hbox>
+				<label  value="Enter Vehicle ID" />
+				<space width="49px"></space>
+				<intbox width="200px" id="vehicle_id" onChange="produpdate.view()" />
+			</hbox>
+
+
+			<hbox>
+				<label  value="Enter Vehicle Type" />
+				<space width="29px"></space>
+				<combobox width="200px"  id="Vehicle_Type">
+					<comboitem label="CAR" id="car" />
+					<comboitem label="BIKE" id="bike" />
+				</combobox>
+			</hbox>
+
+
+
+			<hbox>
+				<label value="Enter Vehicle Name" />
+				<space width="20px"></space>
+				<textbox constraint="no empty" maxlength="13"
+					tabindex="6" id="vehicle_name" width="200px" />
+			</hbox>
+
+
+
+			<hbox>
+				<label value="Enter Vehicle Model" />
+				<space width="19px"></space>
+				<textbox width="200px" id="vehiclemodel"/>
+			</hbox>
+
+
+			<hbox>
+				<label  value="Enter Vehicle Year" />
+				<space width="32px"></space>
+				<longbox constraint="no empty" maxlength="4"
+					tabindex="6" id="vehicle_year" width="200px" />
+			</hbox>
+
+			<hbox>
+				<label  value="Enter Vehicle cost" />
+				<space width="33px"></space>
+				<longbox constraint="no empty" maxlength="7"
+					tabindex="6" id="vehicle_cost" width="200px" />
+			</hbox>
+
+			<hbox>
+				<label  value="Choose Vehicle Color " />
+				<space width="0px"></space>
+				<combobox width="200px" id="VehicleColor">
+					<comboitem label="Black" id="black" />
+					<comboitem label="White" id="white" />
+					<comboitem label="Red" id="red" />
+					<comboitem label="Blue" id="blue" />
+				</combobox>
+			</hbox>
+			<hbox>
+				<label value="Stock availability" />
+				<space width="39px"></space>
+				<longbox id="Quantity" constraint="no empty"
+					maxlength="3" tabindex="6" width="200px" />
+			</hbox>
+			<hlayout>
+				<div class="b_align">
+					<button id="update" label="Update"
+						style="margin-right:180px;background-color:#565656;"
+						onClick="produpdate.update()">
+						Update
+					</button>
+				</div>
+			</hlayout>
+		</vbox>
+	</div>
+</zk>

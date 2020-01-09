@@ -1,0 +1,37 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<style>
+		.container { height: 100%; width: 100%; display: flex; position:
+		center; align-items: center; justify-content: center; }
+		.z-listheader {
+    border-left: 1px solid #f2f2f2;
+    border-bottom: 0px solid #f2f2f2;
+    }
+    .z-listbox-header-border {
+    border-bottom: 1px solid #f2f2f2;
+    }
+    .z-listhead-bar {
+    border-left: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+}
+	</style>
+
+	<space height="30px"></space>
+	<div align="center" id="produpdate"
+		use="com.pennanttech.ProdInfo.ViewProdCntrl" width="400px" style="margin-left:35px;">
+		<vbox>
+			<listbox id="vehicles" sizedByContent="true" mold="paging" pageSize="10" >
+				<listhead>
+					<listheader label="Product_Id" width="100px" style="background-color:#565656;"/>
+					<listheader label="Product_Type" width="130px" style="background-color:#565656;"/>
+					<listheader label="Product_Name" width="150px" style="background-color:#565656;"/>
+					<listheader label="Product_Model" width="150px" style="background-color:#565656;"/>
+					<listheader label="Product_Year" width="120px" style="background-color:#565656;"/>
+					<listheader label="Product_Cost" width="150px" style="background-color:#565656;"/>
+					<listheader label="Product_Color" width="130px" style="background-color:#565656;" />
+					<listheader label="Product_Quantity" width="150px" style="background-color:#565656;"/>
+				</listhead>
+			</listbox>
+		</vbox>
+	</div>
+</zk>

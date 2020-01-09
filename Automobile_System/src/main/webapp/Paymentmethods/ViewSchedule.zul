@@ -1,0 +1,46 @@
+<zk>
+	<style>
+		.container { height: 100%; width: 100%; display: flex; position:
+		center; align-items: center; justify-content: center; }
+		.z-listheader {
+    border-left: 1px solid #f2f2f2;
+    border-bottom: 0px solid #f2f2f2;
+    }
+    .z-listbox-header-border {
+    border-bottom: 1px solid #f2f2f2;
+    }
+    .z-listhead-bar {
+    border-left: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+}
+	</style>
+
+
+	<window width="100%" border="normal"  style="background:transparent;" >
+		<div id="schedules" align="center"
+			use="com.pennanttech.Payments.ViewScheduleCntrl">
+			<hbox align="center">
+				Payment_Id:
+				<intbox id="paymentid"/>
+				<button id="changeBtn1"  label="Search" onClick="schedules.change1()" style="background-color:#565656; "/>
+
+			</hbox>
+			<listbox height="500px" style="margin-top:10px"  sizedByContent="true" mold="paging" pageSize="12" id="schedule" emptyMessage="No schedule found for your id">
+				<listhead>
+					<listheader label="PaymentId"  style="background-color:#565656;" />
+					<listheader label="Index"  style="background-color:#565656;"/>
+					<listheader label="PaymentStartDate"  style="background-color:#565656;"/>
+					<listheader label="PaymentPayDate "  style="background-color:#565656; "/>
+					<listheader label="BeginingBalance" style="background-color:#565656; " />
+					<listheader label="EMI"  style="background-color:#565656; "/>
+					<listheader label="Principle" style="background-color:#565656; " />
+					<listheader label="Intrest" style="background-color:#565656; " />
+					<listheader label="RemainingBalance" style="background-color:#565656; " />
+					<listheader label="Status" style="background-color:#565656; " />
+
+				</listhead>
+			</listbox>
+		</div>
+	</window>
+
+</zk>

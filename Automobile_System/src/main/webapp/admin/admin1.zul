@@ -1,0 +1,110 @@
+
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+ <style>
+ 
+ 
+ .label
+ {
+ color:white;
+ font-weight:bold;
+ font-size:29px;
+ font-family:Trebuchet MS;
+ }
+ img {
+  width: 150px;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+ .z-north-body, .z-south-body, .z-west-body, .z-east-body {
+    line-height: 16px;
+    padding: 0px;
+    color: rgba(0,0,0,0.9);
+   background:#57524d;
+}
+   .z-row-content{
+   background:#57524d;
+}
+.label {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: Trebuchet MS;
+}
+
+.aaa{
+font-family: TrebuchetMS;
+    font-size: 26px;
+    font-weight: bold;
+    margin-left: -53px;
+     color:#ffffff;
+    font-style:italic;
+}
+
+ </style>
+	<div height="755px" width="100%">
+
+
+		<borderlayout sclass="div">
+			<north id="n" size="100px" border="0" height="120px">
+	 <div>
+			<image src="/resources/images/logo1.png" width="220px" height="130px" style="padding-left:20px;"></image>
+			<space width="500px"></space>
+			<label style="color:white;font-weight:bold;font-size:20px;" sclass="aaa">PENN FINANCE</label> 
+			<div style="float:right;margin-top:50px;margin-right:20px;border-radius:8px;" >
+				    <div >
+					   <menubar id="menubar" width="100%">
+				        <menu label="${username}" style="background-color:pink;color:white">
+				         <menupopup>
+				              <menuitem label="logout" id="logout" iconSclass="z-icon-power-off fa-5x" apply="com.pennanttech.Empmodifications.EmpmodificationCntl"/>
+				         </menupopup>
+				        </menu>
+				       </menubar>
+				    </div>
+				 </div>
+	 </div>	
+</north>
+			<west width="WebContent/timeout.zul" border="250px"
+				flex="true" style="background:#57524d;">
+				<vlayout spacing="0">
+					<navbar orient="vertical" width="200px"
+						style="background:#565656;">
+
+
+
+						<nav label="Stock" iconSclass="z-icon-th-list"
+							children="@load(vm.pageMap[self.label].values()) @template('navitem')">
+							<navitem label="Add stock" id="addstock"
+								apply="com.pennanttech.Empmodifications.EmpmodificationCntl"
+								style="background:#008080" />
+							<navitem label="Update stock"
+								id="updatestock" />
+							<navitem label="Delete stock"
+								id="deletestock" />
+							<navitem label="View stock" id="viewstock" />
+						</nav>
+
+						<nav label="Employees"
+							iconSclass="z-icon-group">
+							<navitem label="View employees"
+								id="viewemployees"
+								apply="com.pennanttech.Empmodifications.EmpmodificationCntl"
+								style="background:#008080" />
+							<navitem label="Update employees"
+								id="updateemployees"
+								apply="com.pennanttech.Empmodifications.EmpmodificationCntl"
+								style="background:#C0C0C0" />
+							<navitem label="Delete employees"
+								id="deleteemployees"
+								apply="com.pennanttech.Empmodifications.EmpmodificationCntl" />
+						</nav>
+					</navbar>
+				</vlayout>
+			</west>
+			<center
+				style="background:transparent;background-image: url('../resources/images/stock.jpg');background-repeat: no-repeat;background-size:100% 100%;">
+				<include src="" id="modifications" />
+			</center>
+		</borderlayout>
+	</div>
+</zk>

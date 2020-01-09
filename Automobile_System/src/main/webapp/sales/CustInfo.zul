@@ -1,0 +1,185 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window>
+	<style>
+		.container{ background-image:url('../resources/images/logo2.jpg');
+		background-repeat: no-repeat; background-size: cover;
+		width:1650px; height:755px;margin-left:0px;margin-right:-100px;}
+		.z-window-content { padding:0px;}
+		.z-window {
+    overflow: auto;
+    zoom: 1;
+    border: 1px solid #a8a8a8;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: -87px;
+    padding: 0px;
+    background-color: #7b4790;}
+	</style>
+	<div id="custinfo" use="com.pennanttech.CustInfo.CustCntl" sclass="container">
+	<space height="40px"></space>
+		<html>
+			<h1 style="text-align:center;color:white;margin-right:200px;">
+				CUSTOMER INFO
+			</h1>
+		</html>
+		<space height="30px"></space>
+		<hlayout>
+			<vlayout>
+				<div style="float:left;margin-left:350px;">
+					<div>
+
+						<label style="color:white;" value="Name:"></label>
+						<space width="55px"></space>
+						<textbox constraint="no empty,/^[a-zA-Z ]+$/:Please Use Alphabets" id="name" tabindex="1" width="200px"/>
+					</div>
+					<space></space>
+					<div style="color:white;">
+						<label value="Gender:"></label>
+						<space width="45px"></space>
+						
+						<combobox id="gender"  width="200px" tabindex="2">
+                 		<comboitem label="Male" value="Male"/>
+                 		<comboitem label="Female" value="Female"/>
+                 	</combobox>
+
+					</div>
+
+					<space width="20px"></space>
+					<div>
+
+						<label style="color:white;"
+							value="MobileNo1:">
+
+						</label>
+						<space width="23px"></space>
+						<longbox constraint="no empty" maxlength="10" tabindex="3" width="200px"
+							id="mobileno1"/>
+
+					</div>
+					<space></space>
+					<div>
+
+						<label style="color:white;">MobileNo2:</label>
+						<space width="23px"></space>
+						<longbox constraint="no empty" maxlength="10" tabindex="4" width="200px"
+							 id="mobileno2" />
+
+					</div>
+					<space></space>
+					<div>
+
+						<label
+							style="color:white;">
+							Date Of Birth:
+						</label>
+						<space width="7px"></space>
+						<datebox tabindex="5" id="dob" width="200px" constraint="between 19700101 and 20021231,no empty" />
+
+					</div>
+					<space></space>
+					<div>
+						
+							<label style="color:white;">
+								Profession:
+							</label>
+							<space width="25px"></space>
+							<textbox constraint="no empty,/^[a-zA-Z]+$/:Please Use Alphabets" tabindex="6" id="profession" width="200px"/>
+						
+					</div>
+					<space></space>
+					<div>
+						
+							<label style="color:white;">
+							NetIncome:	
+							</label>
+							<space width="21px"></space>
+							<longbox constraint="no empty" tabindex="7" id="NetIncome" width="200px" maxlength="12"/>
+						
+					</div>
+				</div>
+			</vlayout>
+			<space width="70px"></space>
+			<vlayout>
+				<div style="float:right;margin-right:1000px;">
+
+					<div>
+						
+							<label style="color:white;">Aadhar:</label>
+							<space width="65px"></space>
+							<longbox constraint="no empty"
+								maxlength="14" tabindex="8" id="Aadhar" width="200px" format="#### #### ####"/>
+						
+					</div>
+					<space></space>
+					<div>
+						
+							<label style="color:white;value=PAN:">PAN:</label>
+							<space width="85px"></space>
+							<textbox constraint="no empty"
+								maxlength="10" tabindex="9" id="PAN" width="200px" style="text-transform:uppercase;"/>
+						
+					</div>
+					<space></space>
+					<div>
+						
+							<label style="color:white;value=Address1">
+								Address1:
+							</label>
+							<space width="50px"></space>
+							<textbox constraint="no empty" tabindex="10" id="Address1" width="200px" />
+						
+					</div>
+					<space></space>
+					<div>
+						
+							<label style="color:white;value=Address2">
+								Address2:
+							</label>
+							<space width="50px"></space>
+							<textbox constraint="no empty" id="Address2" tabindex="11" width="200px"/>
+						
+					</div>
+					<space></space>
+					<div>
+						
+							<label style="color:white;value=VehicleId:">
+								VehicleId:
+							</label>
+							<space width="55px"></space>
+							<longbox constraint="no empty" id="VehicleId" tabindex="12" width="200px" readonly="true"/>
+						
+					</div>
+					<space></space>
+					<div style="color:white;">
+						<label value="VehicleType:" />
+						<space width="35px"></space>
+						<textbox constraint="no empty" id="VehicleType" tabindex="13" width="200px" readonly="true"/>
+					</div>
+					<space></space>
+					<div>
+						
+							<label style="color:white;value=VehicleAmount:">
+								VehicleAmount:
+							</label>
+							<space width="15px"></space>
+							<longbox constraint="no empty" id="VehicleAmount" tabindex="14" width="200px" readonly=""/>
+						
+					</div>
+					
+				</div>
+			</vlayout>
+		</hlayout>
+		<space height="45px"></space>
+		<div>
+			<hlayout>
+				<button id="submit" label="Submit" style="margin-left:630px;" onClick="custinfo.submit()"/>
+				<button id="cancel" label="Cancel" style="margin-left:50px;" onClick="custinfo.cancel()"/>
+			</hlayout>
+		</div>
+
+	</div>
+	</window>
+</zk>
