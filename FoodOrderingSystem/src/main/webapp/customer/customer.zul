@@ -1,0 +1,157 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+<style>
+.z-hlayout-inner{ 
+    vertical-align: baseline
+}
+.navbar{
+    width:100%;
+    height:170%;
+     background-color: #5ca0f2;
+      margin-left:480px;
+     margin-top:50px;
+    width:400px;
+    border:0px;
+   background-color:#EC8B5E;	
+  }
+
+    z-nav-text, .z-navitem-text {
+    font-family: cursive;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+}
+   .z-nav-text, .z-navitem-text {
+    font-family:sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    display: inline-block;
+}
+body {
+    margin: 0;
+    padding: 0 0px;
+}
+.z-navbar-vertical>ul .z-nav-content, .z-navbar-vertical>ul .z-navitem-content, .z-navbar-vertical>ul .z-navseparator {
+b
+background-color:"#EC8B5E";
+} 
+.z-navbar ul {
+  background-color:#EC8B5E;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+  
+.subnav{
+margin-top:50px;
+margin-left:300px;
+border:0px;
+}
+.subdiv{
+   margin-left:127px;
+}
+.subdiv1{
+   margin-left:210px;
+   margin-top:60px;
+}
+.pavan{
+margin-top:60px;
+margin-left:20px;
+}
+
+.divalign{
+margin-top:45px;
+width:350px;
+ height:300px;
+}
+ .z-tab{
+     background: #331f00;
+     } 
+ .z-tabs {
+    background: #34445a;
+    padding-right: 420px;
+}
+.colorn
+{
+color:BLACK
+
+}
+.name{
+font-size:30px;
+color:BLACK
+}
+.z-a {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0c0c0c;
+   
+}
+.z-label, .z-radio-content, .z-checkbox-content, .z-loading {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 22px;
+    font-weight: normal;
+}
+</style>
+
+
+     <hbox style="background-color:#EC8B5E" width="100%">
+         <image src="foodlogo.png" width="150px" height="90px"></image>
+           <space /><space />
+          <div sclass="navbar"> 
+             <navbar orient="horizontal" collapsed="false" style="border:none">
+					<nav label="Profile"  iconSclass="z-icon-user" >
+						<navitem label="Customer Profile"
+							iconSclass="z-icon-user" href="Customerprofile.zul" />
+						<navitem label="Change Password"
+							iconSclass="z-icon-edit"  onClick="dv.gownd()"/>
+					</nav>
+					<navitem label="My Orders" iconSclass="z-icon-list" href="Myorders.zul"/>
+					<navitem label="Cart" iconSclass="z-icon-shopping-cart" href="cart.zul"/>
+					<navitem label="Logout" iconSclass="z-icon-sign-out" href="../Admin/login.zul"/>
+				</navbar>
+          </div>
+      </hbox>
+
+    <div sclass="naga" Style="background-image:url('yes.jpg'); background-repeat:no-repeat;background:cover;padding-left:5px" width="100%" height="500px">
+    </div >
+    
+    <div id="dv"  style="background-color:#F5DEB3"  use="com.pennant.customer.Resturents"  >
+
+            <vbox sclass="subdiv" id="sample" style="padding: 10px; cursor:hand;cursor:pointer" width="500px" height="500px">
+            
+            </vbox>
+  
+   </div> 
+   <div  height="274px" width="1423px" style="background-color:#EC8B5E">
+          <hlayout>
+          <div>
+            <vbox sclass="subdiv1">
+               <image src="cook1.png"  width="180px" height="180px"></image>
+            </vbox>
+          </div>
+           <div>
+            <vbox sclass="subdiv1">
+               <image src="icon-delivery-18.jpg" width="180px" height="180px" ></image>
+            </vbox>
+          </div>
+            <div  style="hover(spinOnce);">
+            <vbox sclass="subdiv1">
+              <image src="d.png" width="180px" height="180px"></image>
+            </vbox>
+          </div>
+         </hlayout>
+        
+   </div> 
+   <div height="64px" width="1423px" style="background-color:#EC8B5E">
+   <vbox>
+   <hbox>
+          <a onClick="dv.about()" style="margin-left:607px;">About us</a>
+          <a onClick="dv.feedback()" style="margin-left:15px;">Feedback</a>
+          </hbox>
+           <a href="http://www.pennanttech.com/" style="margin-left:600px;">www.pennanttech.com</a>
+    </vbox>
+   </div>
+</zk>

@@ -1,0 +1,42 @@
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+
+<window  border="normal" width="400px" sclass="window" id="card" use="com.pennant.customer.PaymentGatewayControl">
+<style>
+  .window{
+     margin-top:200px;
+     margin-left:250px;
+  }
+  .line{
+    width: 170px;
+    margin-top:10px;
+     border-top-width: 0px;
+    border-left-width: 0px;
+    margin-right: 0px;
+    border-right-width: 0px;
+}
+   .line1{
+    width: 70px;
+    border-top-width: 0px;
+    border-left-width: 0px;
+    margin-right: 0px;
+    border-right-width: 0px;
+}
+</style>
+
+    <hbox>
+		 <label value="Card" style="font-family: Georgia, serif;font-size:30px;color:Black"/>
+	</hbox><separator/>
+    <label  value="Card Number"/><space width="23px"></space>
+	<textbox class="line" id="cardnumber" /> 
+    <separator/>
+	<label value="CVV"/>
+	<textbox id="cvv" maxlength="3" placeholder="ex:123" class="line1"/><space width="40px"></space>
+	<label value="Exp Date:"/>
+	<textbox id="expdate"  maxlength="7" placeholder="MM/YYYY" class="line1"/>
+	 <separator/>
+	<label value="Name"/><space width="23px"></space>
+	<textbox class="line" id="name" /><separator/><separator/>  
+    <button type="button" id="ok" sclass="z-button" style=" margin-left: 10px;background-color:#C74044;" onClick="card.onOKCard()">OK</button>
+</window>
+</zk>

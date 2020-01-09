@@ -1,0 +1,31 @@
+
+<?init class="com.pennant.authentication.Authentication"?>
+<?page title="Customerorders" contentType="text/html;charset=UTF-8"?>
+
+<zk>
+
+<window  id="myordersview" use="com.pennant.customer.Myorderpopctrl"  order="${arg.order}" >
+
+  <div id="Custmoerord"  width="500px"  >
+     <vbox >
+		<hbox>
+			<label value="My Orders" style="font-family: Georgia, serif;font-size: 30px;color:white "/>
+		</hbox>
+		  <space width="10px"/>
+         <listbox id="myorder" hflex="min" vflex="min"  width="450px" multiple="true" >
+           <listhead>
+             
+             <listheader label="Item Id"  style="background-color:#EC8B5E;font-family:Trebuchet MS;color:white; font-size: 20px;" width="100px"></listheader>
+             <listheader label="Item Name" style="background-color:#EC8B5E;font-family:Trebuchet MS;color:white; font-size: 20px;" width="150px"></listheader>
+             <listheader label="Quantity"  style="background-color:#EC8B5E;font-family:Trebuchet MS;color:white; font-size: 20px;" width="100px"></listheader>
+          
+              <listheader label="Total Price"  style="background-color:#EC8B5E;font-family:Trebuchet MS;color:white; font-size: 20px;" width="120px"></listheader>
+          </listhead>
+         
+      </listbox>
+       
+    </vbox>
+  </div>  
+
+  </window>
+</zk>

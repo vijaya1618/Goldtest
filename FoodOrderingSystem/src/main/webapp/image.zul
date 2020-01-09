@@ -1,0 +1,9 @@
+<zk>
+
+<window title="new page title" border="normal" id="click" use="com.pennant.admin.blobcontrol">
+   <button label="Upload"
+             onClick="click.onUploadPDF()">
+            </button>
+
+</window>
+</zk>

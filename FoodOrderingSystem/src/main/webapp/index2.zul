@@ -1,0 +1,36 @@
+<zk>
+<window id="login" use="com.pennant.insure.control">
+	<grid>
+		<columns>
+			<column label="" width="120px" />
+			<column label="" />
+
+		</columns>
+		<rows>
+			<row>
+				<label value="UserName" width="150px" />
+				<hlayout>   
+					<textbox value="" id="user_name" width="150px" tabindex="1" />
+				</hlayout>
+				
+			</row>
+			<row>
+				Password
+				<textbox type="password" id="pass_word" value="" width="150px"
+					tabindex="2" />
+				
+			</row>
+			<row>
+				<cell colspan="3" style="text-align:center">
+					<vlayout>
+						<label visible="@load(empty vmsgs)"
+							value="@load(empty vmsgs ? 'Form successfully submitted!' : '', before='submit')" />
+						<button label="Submit" onClick="login.verifylogin()" width="100px"
+							height="30px" />
+					</vlayout>
+				</cell>
+			</row>
+		</rows>
+	</grid>
+	</window>
+</zk>

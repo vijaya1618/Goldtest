@@ -1,0 +1,80 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+ <window id="profileedit"  use="com.pennant.admin.Customerprofileeditwnd" >
+  <style>
+    .profileedit{
+       margin-left:200px;
+       margin-top:50px;
+
+       margin-bottom:10px;
+
+     }
+     .boxing{
+       border-radius:0px;
+       float:left;
+       margin-top:50px;
+       margin-left:70px;
+       padding:30px;
+       box-shadow: 2px 2px 10px;
+       height:340px;
+       width:400px;
+     }
+     .button{
+       padding: 1px 7px;
+    }
+     .Bur{
+    margin-left:23px;
+    }
+    .Bir{
+    margin-left:25px;
+    }
+    .Bor{
+    margin-left:40px;
+    margin-right:25px;
+    }
+    .Ber{
+    margin-left:70px;
+    margin-right:25px;
+    }
+    .z-button{
+    background-color:#C74044 ;
+    color:white;
+    }
+</style> 
+
+       <vbox sclass="boxing">
+				<hbox>
+					<label value="EDIT" style="font-family: Georgia, serif;font-size:30px;color:Black"/>
+				</hbox>
+				<space  width="10px"/>
+				<vlayout>
+				  <hbox>
+		            <cell>		  
+				      <label value="First Name:"  style="font-family:Trebuchet MS; font-size: 18px;color:black" />
+				     </cell>
+				      <cell>	
+				    <textbox sclass="Bur"  width="200px" id="fname"/>
+				      </cell>
+				   </hbox>
+				   <hbox>
+				       <label value="Last Name:"  style="font-family:Trebuchet MS; font-size: 18px;color:black" />
+				     <textbox sclass="Bir"  width="200px" id="lname"/>
+				   </hbox>
+				   <hbox>
+				      <label value="Email:"  style="font-family:Trebuchet MS; font-size: 18px;color:black" />
+				     <textbox sclass="Ber"  width="200px" id="emailid"/>
+				   </hbox>
+				   <hbox>
+				      <label value="Phone Number:"  style="font-family:Trebuchet MS; font-size: 18px;color:black" />
+				     <longbox sclass="Bor"  width="200px" id="phoneno"/>
+				   </hbox><space  width="10px"/>
+				   <hlayout>
+				     <button type="button" id="ok" sclass="z-button" style=" margin-left: 10px;background-color:#C74044;" onClick="profileedit.onOK()">OK</button>
+				   </hlayout>
+			 </vlayout>
+	   </vbox>
+
+   </window>
+   
+</zk>

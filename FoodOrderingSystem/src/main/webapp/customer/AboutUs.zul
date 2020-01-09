@@ -1,0 +1,45 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+<window title="AboutUs" width="700px" height="600px" class="style">
+  <style> 
+ .style{
+    background-color: #9fcef3;
+    font-family:cursive;
+    margin-left:200px;
+    margin-top:50px;
+    font-size:15px;
+   }
+   .z-label, .z-radio-content, .z-checkbox-content, .z-loading {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+</style>
+    <vbox id="result">
+    </vbox>
+    <zscript><![CDATA[
+        String[] s = {"History:",
+        		       "Go4food began operations by signing up a few restaurants in Vizag. Soon enough, the first team of Hunger Saviors came into action to deliver food within 35 minutes.",
+        		      "The technology that delivers great food right to your doorstep was completely developed in-house! With love and support from consumers, Go4food expanded far and wide, first through the entire city of Vizag and then across the entire country. As they say, the rest is history.",
+        		      "Platform:",
+        		      "Go4food processes and sends orders directly to partner restaurants, which then deliver to their customers. The service is available via its websites. Customers order food by entering their Delivery Address on the site and browsing for food from a list of restaurants. They can create meals by browsing restaurant menus and selecting items they want to order before entering an address and proceeding to the checkout. Restaurants receive these orders and then deliver to customers.",
+        		      "Online Ordering:",
+        		      "Go4food accepts orders via its websites.It connects customers with restaurants that offer food delivery in their area and lets them choose, order and pay online. Go4food also has a review section on restaurant pages, where customers can comment on sales process, delivery, taste and overall impression of restaurants.",
+        		      };
+        for (int j = 0; j < s.length; ++j) {
+            Label l = new Label(s[j]);
+            l.maxlength = 500;
+            l.hyphen = true;
+            l.parent = result;
+           
+        }
+    ]]>
+    </zscript>
+</window>
+
+
+
+
+
+</zk>

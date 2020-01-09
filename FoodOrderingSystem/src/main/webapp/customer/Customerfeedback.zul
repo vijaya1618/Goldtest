@@ -1,0 +1,75 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+
+  <window class="feedback" id="feed" use="com.pennant.customer.FeedbackController" Style="margin-left:240px;left:500px"> 
+  <style>
+     .feedback {
+    color: black;
+    
+    margin-top: 24px;
+    margin-left: 14px;
+    margin-right: 6px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 5px 8px;
+    hover: none;
+    left:400px;
+}
+      .z-rating>.z-rating-selected {
+    color: gold;
+}
+ .z-rating>.z-rating-hover {
+    color: gold;
+}
+    .feedback.z-label {
+            font-size: 20px;
+           font-family:Georgia, serif; 
+        }
+
+       
+   .z-window-content {
+    padding: 16px;
+    background: #fff;
+    color: rgba(0,0,0,0.9);
+    overflow: hidden;
+    zoom: 1;
+    margin-top: -15px;
+    margin-left: 4px;
+    width: 341px;
+    height: 315px;
+}  
+     .button{
+       padding: 1px 7px;
+       margin-top:23px;
+       background-color:#EC8B5E;
+    } 
+
+</style>
+		<hbox>
+			<label value="Feedback" style="font-size: 30px;margin-bottom:0px"/>
+		</hbox>
+		
+        <vbox sclass="feedback">
+        <hbox>
+               <label value="Rating" />
+                <space width="10px"/>
+               <rating rating="1" id="rate" iconSclass="z-icon-star" height="20px"/>
+               </hbox>
+           <separator/>
+           
+           <hbox>
+	          <label  value="Description" style="font-size: 20px;"/>
+	       </hbox>
+		   <hbox>
+		      <textbox id="description" value="" rows="4" width="300px"/>
+	       </hbox>
+	       <hbox>
+		      <button type="button" id="submit" sclass="button" style=" margin-left: 10px;" onClick="feed.feedControl()">Submit</button>
+		      <button type="button" id="cancel" sclass="button" style=" margin-left: 10px;" onClick="feed.onCancel()">Cancel</button>
+	       </hbox>
+         </vbox>
+
+</window>
+</zk>

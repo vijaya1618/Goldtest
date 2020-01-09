@@ -1,0 +1,48 @@
+<?init class="com.pennant.authentication.Authentication"?>
+<?xml version="1.0" encoding="utf-8"?>
+
+<zk>
+<style>
+.roshini
+{
+font-family:Georgia, serif;
+font-size: 20px;
+
+}
+
+
+</style>
+
+<window id="popup"  width="500px" 
+  use="com.pennant.admin.menupopcontroll" task="${arg.task}">
+	<vbox>
+		<grid width="400px">
+		<columns>
+			<column width="150px"/>
+			<column width="200px"/>
+		</columns>
+		<rows>
+			<row>
+				<label class="roshini" value="Restuarant Id:"/> 
+				
+				<textbox id="restuarantid"/>
+			</row>
+			<row>
+			<label class="roshini" value="Menu Name:"/> 
+				 
+				<textbox id="menuname" rows="3" cols="20"/>
+			</row>
+			<row>
+			<label class="roshini" value="Menu Id:"/> 
+				 
+				<textbox id="menuid" rows="3" cols="20"/>
+			</row>
+		</rows>
+		</grid>
+		<hbox>
+			<button label="OK" style="background-color:black ;"  onClick="popup.onOK()"/>
+			<button label="Cancel" style="background-color:black ;" onClick="popup.onCancel()"/>
+		</hbox>
+	</vbox>
+</window>
+</zk>

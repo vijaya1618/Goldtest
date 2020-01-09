@@ -1,0 +1,22 @@
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+<window  border="normal" width="330px" sclass="s" id="gpay" use="com.pennant.customer.PaymentGatewayControl">
+<style>
+  .s{
+     margin-top:200px;
+     margin-left:250px;
+  }
+
+</style>
+
+
+    <hbox>
+		 <label value="Google Pay" style="font-family: Georgia, serif;font-size:30px;color:Black"/>
+	</hbox><space  width="10px"/>
+	<hbox>
+		<label  value="UPI"/><space width="50px"></space>
+		<textbox id="upipin" type="password" width="150px" />
+	</hbox><separator/><separator/>
+	<button type="button" id="ok" sclass="z-button" style=" margin-left: 10px;background-color:#C74044;" onClick="gpay.onOKGpay()">OK</button>
+</window>
+</zk>

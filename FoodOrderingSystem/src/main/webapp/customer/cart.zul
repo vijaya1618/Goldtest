@@ -1,0 +1,202 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+  <style>
+    .cart{
+       margin-left:40px;
+       margin-top:10px;
+     }
+   <!--   .boxing{
+       border-radius:0px;
+       float:left;
+       margin-top:50px;
+       margin-left:70px;
+       padding:30px;
+        padding-right:0px;
+       box-shadow: 2px 2px 10px;
+       height:550px;
+       width:100px;
+     } -->
+     .boxing{
+       border-radius:0px;
+       float:left;
+       margin-top:45px;
+       margin-left:800px;
+       padding:30px;
+       padding-right:0px;
+       box-shadow: 2px 2px 10px;
+       background-color: #f4f5f7;
+       width:500px;
+     }
+     .z-hbox, .z-vbox {
+    border-spacing: 0;
+    margin-right: -67px;
+}
+     .button{
+       padding: 0px 8px;
+       style:Georgia, serif;
+     
+    }
+    .rosh{
+    margin-left:3px;
+    }
+    .Taxes{
+    margin-left:45px;
+    }
+    .Charges{
+    margin-left:-54px;
+    margin-right:50px;
+    }
+    .Grand{
+    margin-left:-38px;
+    margin-right:50px;
+    }
+    .align{
+    margin-left:40px;
+    }
+    
+    
+    .z-button {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 17px;
+    font-weight: normal;
+    font-style: normal;
+    color:black;
+    min-height: 28px;
+    border: 2px solid transparent;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    padding: 0px 15px;
+    line-height: normal;
+    background-color: #EC8B5E;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    -o-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    -ms-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    margin-bottom: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    cursor: pointer;
+    white-space: nowrap;
+    
+}
+
+ .name
+    {
+   
+    font-size:16px;
+    color:black;
+    
+    width:100px;
+    }
+    .carte
+    {
+    margin-left:800px;
+    margin-top:250px;
+    }
+    .cartlabel
+    {
+    font-size: 34px;
+    }
+    .cartbutton
+    {
+    height: 32px;
+    width: 84px;
+    }
+          .navbar{
+         margin-left: 151px;
+    margin-top: 50px;
+    border: 0px;
+	
+ 
+   	
+  }
+   
+.z-navbar ul {
+ 	background-color: rgba(0,0,0,0);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.z-navbar-horizontal {
+    padding: 4px 2px;
+    margin-left:387px;
+    margin-top:-43px;
+}
+  </style>
+   <div Style="background-image:url('d.jpg'); background-repeat:no-repeat;background:cover;" width="100%" height="1200px">
+   <hbox  width="100%">
+         <image src="foodlogo.png" width="150px" height="90px"></image>
+           <space /><space />
+          <div sclass="navbar"  > 
+             <navbar orient="horizontal"  style="border:none" collapsed="false">
+            
+					<nav label="Profile"  iconSclass="z-icon-user" >
+						<navitem label="Customer Profile"
+							iconSclass="z-icon-user" href="Customerprofile.zul" />
+						
+					</nav>
+					<navitem label="My Orders" iconSclass="z-icon-list" href="Myorders.zul"/>
+					<navitem label="Cart" iconSclass="z-icon-shopping-cart" href="cart.zul"/>
+					<navitem label="Logout" iconSclass="z-icon-sign-out" href="../Admin/login.zul"/>
+				
+				</navbar>
+          </div>
+      </hbox>
+   <div id="cart" use="com.pennant.customer.Cartcontroller">
+     <vbox sclass="boxing" id="cartitem">
+				 <hbox>
+					<label value="CART" style="font-family: Georgia, serif;font-size:40px;"/> 
+				</hbox>
+				  <space width="10px"/>
+				   <hbox>
+					  <cell>
+						<label  value="Items"  style="font-family:Georgia, serif;font-size: 35px;"/>
+				      </cell>
+				    </hbox>
+				 <vbox id="items">
+				 
+				 
+				 </vbox>
+				 
+			
+				  <space/>
+				<vlayout>
+				    <hbox>
+					   <label value="Price" style="font-size: 30px;"/>
+				    </hbox>
+				    
+				    <hbox>
+					  <cell>
+					     <label value="Item Total"  style="font-family: Georgia, serif;font-size: 20px;" id="itemtotal"/><space width="170px"></space>
+					    <label id="Item_Total"/>
+					  </cell>
+					</hbox>
+					
+					<hbox>
+					  <cell>
+					     <label value="Delivery Charges" style="font-family: Georgia, serif;font-size: 20px;" id="deliverycharges"/><space width="166px"></space>
+					     <label   sclass="Charges"  id="Deliverycharges"/>
+					  </cell>
+					</hbox>
+					 <hbox>
+					  <cell>
+					     <label value="Grand Total"  style="font-family: Georgia, serif;font-size: 25px;" id="grandtotal"/><space width="129px"></space>
+					    	<label id="Grand_Total"/>
+					  </cell>
+					</hbox> 
+				</vlayout>
+				
+				   <space/>
+				   
+				    <hbox>
+				  	 <button type="button" id="button2" sclass="z-button" style=" margin-left:10px;" onClick="cart.items()">Back</button>
+				    <button type="button" id="button1" sclass="z-button" style=" margin-left:200px;" onClick="cart.payment()">Payment</button>
+				    </hbox> 
+     </vbox>
+     </div>
+  </div>
+</zk>

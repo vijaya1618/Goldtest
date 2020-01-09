@@ -1,0 +1,81 @@
+<?init class="com.pennant.authentication.Authentication"?>
+<?xml version="1.0" encoding="utf-8"?>
+
+<window id="itemWnd" title="Items Update"  position="top,center" border="normal" width="520px" 
+  use="com.pennant.admin.ItemWnd" item="${arg.item}">
+  <style>
+  .z-button {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    color: #fff;
+    min-height: 24px;
+    border: 2px solid transparent;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    padding: 8px 16px;
+    line-height: 16px;
+    background-color: #0093f9;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    -o-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    -ms-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    cursor: pointer;
+    white-space: nowrap;
+}
+.z-label {
+    margin-top: 4px;
+    margin-left: 0px;
+    margin-right: 37px;
+    line-height: normal;
+    float: right;
+}
+  </style>
+	<vbox>
+		<grid width="460px">
+		<columns>
+			<column width="250px"/>
+			<column width="200px"/>
+		</columns>
+		<rows>
+			<row>
+				<label value="Item_Id" style="font-family: Georgia, serif;font-size: 20px;color:black"  />
+				<intbox id="Item_Id" width="150px" readonly="true"/>
+			</row>
+			<row>
+			<label value="Item Name: " style="font-family: Georgia, serif;font-size: 20px;color:black"  />
+				
+				<textbox id="Item_Name" width="150px"/>
+			</row>
+			<row>
+			<label value="Item Price: " style="font-family: Georgia, serif;font-size: 20px;color:black"  />
+				
+				<intbox id="Item_Price" width="150px"/>
+			</row>
+			<row>
+			<label value="Item Availability:" style="font-family: Georgia, serif;font-size: 20px;color:black"  />
+			
+				<combobox id="Item_Availability" width="150px">
+				<comboitem label="Available" value="Available"/>
+				
+				<comboitem label="Not Available" value="Not Available"/>
+				</combobox>
+			</row>
+			<row>
+			<label value="Menu Id:" style="font-family: Georgia, serif;font-size: 20px;color:black"  />
+				 
+				<intbox id="Menu_Id" width="150px"/>
+			</row>
+		</rows>
+		</grid>
+		<hbox>
+			<button label="OK" style="background-color:black ;font-family: Georgia, serif;font-size: 20px;color:white;margin-left:200px" onClick="itemWnd.onOK()"/>
+			
+		</hbox>
+	</vbox>
+</window>

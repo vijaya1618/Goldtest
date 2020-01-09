@@ -1,0 +1,132 @@
+<zk>
+<style>
+.header{
+width:1418px;
+height:13%;
+background:#93abbb;
+padding:0px;
+margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    position: relative;
+}
+img{
+margin-left:25px;
+width:115px;
+height:100px;
+}
+.z-label{
+margin-top:50px;
+margin-left:50px;
+margin-right:27px;
+    line-height: normal;
+    float: right;
+    }
+
+.z-navitem-content {
+    color: #333;
+    display: block;
+    height: 40px;
+    border: 1px solid #f4f4f3;
+    padding: 0 8px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    width: 143px;
+    line-height: 32px;
+}
+.table{
+		  margin-left:200px;
+		  margin-top:30px;
+		}
+.navbar{
+		  width: 100%;
+		 height: 100%;
+		  background:#93abbb;  
+		}
+   .z-hbox{ 
+   height: 100%;
+       margin: 0 auto;
+       width: 100%;
+   }
+   .z-button{
+   background:#91a5b3;
+   }
+   .z-column{
+   background:#93abbb;
+   }
+   
+   .z-column-content{
+   width:100px;
+   }
+    
+    .z-bandbox{
+        margin-top: 44px;
+       
+    }
+    .z-listheader {
+background:#93abbb;
+}
+.z-button{
+margin-left:100px;
+}
+</style>
+
+<div sclass="header">
+<div ><image src="foodlogo.png"/>
+<label value="Logout"  /><space /><label value="Profile" />
+</div>
+</div>
+<hbox>
+	<div sclass="navbar">
+			<vbox width="25px" height="100px">
+				<navbar orient="vertical" collapsed="false">
+					<navitem label="Dashboard"
+						iconSclass="z-icon-dashboard" />
+					<nav label="Restuarants"
+						iconSclass="z-icon-coffee">
+						<navitem label="Add"
+							iconSclass="z-icon-plus-circle" />
+						<navitem label="Update/Delete"
+							iconSclass="z-icon-edit" />
+
+					</nav>
+					<navitem label="Orders"
+						iconSclass="z-icon-clipboard" />
+					<navitem label="Customers"
+						iconSclass="z-icon-users" />
+				</navbar>
+			</vbox>
+
+		</div >
+	
+	
+		
+	
+		
+<div sclass="table" >
+
+
+<vbox>
+
+ <listbox id="items" width="490px" rows="2">
+		<listhead>
+			<listheader label="Item_Id"  />
+			<listheader label="Menu_Id"/>
+			<listheader label="Item_Name"/>
+			<listheader label="Item_Price"/>
+			<listheader label="Item_Availability"/>
+		</listhead>
+		
+	</listbox>
+	<hbox>
+		<button label="Update..." onClick="itemlistwnd.onUpdate()"/>
+		<button label="Delete" onClick="itemlistwnd.onDelete()"/>
+	</hbox>
+ </vbox>
+ </div>
+
+
+  </hbox>
+</zk>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?page title="Task"?>
+<window id="popup" title="Menu" border="normal" width="500px" 
+  use="com.pennant.admin.menupopcontroll" task="${arg.task}">
+	<vbox>
+		<grid width="400px">
+		<columns>
+			<column width="150px"/>
+			<column width="200px"/>
+		</columns>
+		<rows>
+			<row>
+				Restuarant Id: 
+				
+				<textbox id="restuarantid"/>
+			</row>
+			<row>
+				Menu Name: 
+				<textbox id="menuname" rows="3" cols="20"/>
+			</row>
+			<row>
+				Menu Id: 
+				<textbox id="menuid" rows="3" cols="20"/>
+			</row>
+		</rows>
+		</grid>
+		<hbox>
+			<button label="OK" onClick="popup.onOK()"/>
+			<button label="Cancle" onClick="popup.onCancel()"/>
+		</hbox>
+	</vbox>
+</window>

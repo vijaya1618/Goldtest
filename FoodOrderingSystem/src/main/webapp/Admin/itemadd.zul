@@ -1,0 +1,205 @@
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+	<style>
+		.header{
+		 width:1435px;
+		  height:15%;
+		 
+		    overflow:hidden;
+background-color: #5ca0f2;
+background-image: linear-gradient(315deg, #5ca0f2 0%, #f5f7f6 74%);		   
+		   padding:0px;
+		} 
+		.navbar{
+      width:100%;
+   height: 764px;
+     background-color: #5ca0f2;
+background-image: linear-gradient(315deg, #5ca0f2 0%, #f5f7f6 74%);		
+     overflow:hidden;
+	} 
+		img{
+		    margin-left:25px;
+		    width:115px;
+		    height:100px;
+		    } 
+		    .z-label{
+		  margin-top:28px;
+		  margin-left:50px;
+		  margin-right:27px;
+		  line-height: normal;
+		  float: right; 
+		} 
+		
+		.z-navitem-content { 
+		  color: #333;
+		  display: block;
+		  height: 40px;
+		
+		  padding: 0 8px;
+		  position: relative;
+		  overflow: hidden;
+		  text-decoration: none;
+		  width: 143px;
+		  line-height: 32px; 
+		} 
+		.table{
+		  margin-left:200px;
+		  margin-top:30px;
+		}
+		.boxing{
+
+        margin-top: 100px;
+    	margin-left: 140px;
+  	 background-color: #5ca0f2;
+background-image: linear-gradient(315deg, #5ca0f2 0%, #f5f7f6 74%);
+  	    padding:20px;
+ 	    box-shadow: 2px 2px 10px;
+  	    border-radius: 3px;
+}
+.z-textbox{
+margin-top:20px;
+margin-right:5px;
+
+
+}
+.z-intbox{
+margin-top:20px;
+
+
+}
+.hbox{
+  margin-left:120px;
+  margin-bottom:10px;
+  color:black;
+ }
+ .slide{
+margin-left: 141px;
+margin-right:80px;
+margin-top:20px;
+
+font-size:20px;
+    color: #f9f3f3;
+    background-color:#3883f2;
+
+}
+.label{
+font-weight:bold;
+ font-style:italic;
+  font-size:20px;
+  
+}
+.z-navbar-vertical>ul .z-nav-content, .z-navbar-vertical>ul .z-navitem-content, .z-navbar-vertical>ul .z-navseparator {
+background-color: #738bdc;
+background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+
+}
+ .z-nav-text, .z-navitem-text {
+    font-family:sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+}
+.z-navbar ul {
+   background-color: #738bdc;
+   background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.z-navbar-vertical>ul .z-nav-content, .z-navbar-vertical>ul .z-navitem-content, .z-navbar-vertical>ul .z-navseparator {
+background-color: #738bdc;
+background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+
+}
+ .z-nav-text, .z-navitem-text {
+    font-family:sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+}
+.z-navbar ul {
+   background-color: #738bdc;
+   background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+	</style>
+<div sclass="header">
+		<div>
+			<image src="foodlogo.png" />
+		
+		</div>
+	</div>
+	<hbox>
+		<div sclass="navbar">
+			<vbox width="25px" height="100px">
+				<navbar orient="vertical" collapsed="false">
+					<navitem label="Dashboard"
+						iconSclass="z-icon-dashboard" 
+						href="Adminpage.zul" />
+					<nav label="Restuarants"
+						iconSclass="z-icon-coffee">
+						<navitem label="Add"
+							iconSclass="z-icon-plus-circle" href="Restaurantadd.zul" />
+						<navitem label="Update/Delete"
+							iconSclass="z-icon-edit" href="RestaurentUpdateDel.zul"/>
+						
+					</nav>
+					<nav label="Menu"
+						iconSclass="z-icon-tasks">
+						<navitem label="Add"
+							iconSclass="z-icon-plus-circle" href="menuadd.zul" />
+						<navitem label="View"
+							iconSclass="z-icon-youtube-play" href="Menu.zul"/>
+						
+					</nav>
+					<nav label="Items"
+						iconSclass="z-icon-beer">
+						<navitem label="Add"
+							iconSclass="z-icon-plus-circle" href="itemadd.zul" />
+						<navitem label="Update/Delete"
+							iconSclass="z-icon-edit" href="ItemList.zul"/>
+
+					</nav>
+					<navitem label="Orders"
+						iconSclass="z-icon-clipboard" href="Orderslist.zul"/>
+					<navitem label="Customers"
+						iconSclass="z-icon-users" href="Customers.zul"/>
+						
+						<navitem label="Sign Out" 	
+						iconSclass="z-icon-sign-out" href="login.zul"/>
+				</navbar>
+			</vbox>
+
+		</div>
+<div sclass="table" id="red" use="com.pennant.admin.restcontrol" >
+ <vbox sclass="boxing">
+ <hbox sclass="hbox">
+<label value="Item" style=" font-family:Georgia, serif; font-size: 20px;color:black"  sclass="label"/>
+</hbox>
+<hbox>
+<label  value="Menu Id" style=" font-family:Georgia, serif; font-size: 20px;color:black"/> <space width="34px"/>
+<intbox id="menuID" width="150px" />
+</hbox>
+<hbox>
+<label  value="Item Name" style=" font-family:Georgia, serif; font-size: 20px;color:black"/>  <space width="10px"/>
+<textbox id="itemName" width="150px" />
+</hbox>
+<hbox>
+<label  value="Item Price" style=" font-family:Georgia, serif; font-size: 20px;color:black"/> <space width="20px"/>
+<intbox id="itemPrice" width="150px" />
+</hbox>
+
+<hlayout>
+                            <button sclass="slide" label="ADD"  onClick="red.itemadd()"
+                                width="130px" height="40px" />
+                        </hlayout>
+</vbox>
+ </div>
+</hbox>
+
+
+</zk>

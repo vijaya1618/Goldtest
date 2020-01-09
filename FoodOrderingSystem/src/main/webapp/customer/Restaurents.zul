@@ -1,0 +1,212 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+<style>
+body {
+    margin: 0;
+    padding: 0px; 
+}
+      .z-hlayout-inner{ vertical-align: baseline;}
+      .navbar{
+    width:100%;
+    height:170%;
+    
+      margin-left:300px;
+     margin-top:50px;
+    width:400px;
+    border:0px;
+  	
+  }
+
+.z-tab-text {
+    font-style: normal;
+    color: black;
+    display: block;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.z-listhead-bar {
+    border-left: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    color: black;
+    background-color: black;
+}
+.z-tab:hover {
+    font-style: normal;
+    
+    
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+.z-tabbox-icon{
+background: #ecece1;
+}
+    z-nav-text, .z-navitem-text {
+    font-family: cursive;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+}
+   .z-nav-text, .z-navitem-text {
+    font-family:sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    display: inline-block;
+}
+
+
+.subnav{
+margin-top:15px;
+margin-left:500px;
+width:415px;
+border:0px;
+}
+  
+      .subdiv{
+          margin-left:50px;
+          font-family:Georgia, serif;
+         	
+           height:60px;
+           font-size:50px;
+          }
+          .subdivs
+          {
+          	
+          	 margin-left:50px;
+          font-family: Trebuchet MS;
+          
+         	
+           height:60px;
+           font-size:30px;
+          }
+          
+      .subdiv1{
+          margin-left:40px;
+          margin-top:100px;
+          font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+          font-size: 37px;
+          font-weight: normal;
+          }
+      .pavan{
+          margin-top:60px;
+          margin-left:20px;
+          }
+      .submenu{ margin-top:100px;  margin-left:100px; }
+      .bg{background-color:#000000;}
+      .divalign{margin-top:50px;}
+      .tabbox{margin-top:50px;margin-left:100px;}
+     
+         .z-tab{
+            background: #ecece1;
+             font-color:black;
+         } 
+         .z-tab-text {
+    /* color: #f9fcff; */
+    display: block;
+    line-height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 19px;
+    font-weight: bold;
+}
+         .listbox{
+            margin-left:480px;
+            margin-top:25px;
+            box-shadow: 2px 2px 8px;
+           height: 466px;
+          box-shadow: 2px 2px 10px; 
+  
+         }
+        
+.z-listitem .z-listcell {
+    border-top: 1px solid #f2f2f2;
+    color:transparent !important;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border: 0;
+    background-color:white;
+  box-shadow: 2px 2px 10px; 
+}
+.html{
+overflow: hidden;
+
+}
+.cart{
+margin-left:100px;
+background-color:black;
+}
+
+.z-tabs-content{
+
+background: #ecece1;
+}
+.z-navbar ul {
+   background-color: rgba(0,0,0,0);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-left:108px;
+}
+</style>
+<div>
+     
+      <div style="background-image:url('ss.jpg'); background-repeat:no-repeat;background:cover;height:950px" >
+      <hbox  width="100%">
+         <image src="foodlogo.png" width="150px" height="90px"></image>
+           <space /><space />
+          <div sclass="navbar"> 
+             <navbar orient="horizontal"  style="border:none" collapsed="false">
+             
+					<nav label="Profile"  iconSclass="z-icon-user" >
+						<navitem label="Customer Profile"
+							iconSclass="z-icon-user" href="Customerprofile.zul" />
+						
+					</nav>
+					<navitem label="My Orders" iconSclass="z-icon-list" href="Myorders.zul"/>
+					<navitem label="Cart" iconSclass="z-icon-shopping-cart" href="cart.zul"/>
+					<navitem label="Logout" iconSclass="z-icon-sign-out" href="../Admin/login.zul"/>
+				</navbar>
+          </div>
+      </hbox>
+        <hlayout id="item"  use="com.pennant.customer.Itemsctrl">
+           <vbox id="Rname">
+           </vbox>
+         </hlayout>
+     
+     
+       <div sclass="subnav"  >
+          <tabbox id="tabs">
+            <tabs id="tab">
+            </tabs>
+           </tabbox>
+     
+       </div>  
+       
+       
+       <listbox sclass="listbox" id="Menu"  width="450px" height="600px" >
+         <listhead>
+           <listheader label="Items" style="font-family: Georgia, serif;font-size: 30px;color:white;background-color:black;"/>
+         </listhead>
+         <template name="model">
+       <listitem>
+         <listcell label="${each.itemName}" />
+         <listcell label="${each.itemPrice}" />
+         <listcell>
+            <button label="ADD" id="${each.itemID}" style="font-family:Trebuchet MS;font-size: 20px;color:white;background-color:black;" onClick="item.add(self.getId())"/>
+         </listcell>
+       </listitem>
+       </template>
+        </listbox>
+       
+        </div>
+   
+</div>
+</zk>

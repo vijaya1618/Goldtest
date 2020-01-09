@@ -1,0 +1,194 @@
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+<style>
+.header{
+		 width:1435px;
+		  height:15%;
+		 
+		    overflow:hidden;
+background-color: #5ca0f2;
+background-image: linear-gradient(315deg, #5ca0f2 0%, #f5f7f6 74%);		   
+		   padding:0px;
+		} 
+		.navbar{
+      width:100%;
+   height: 764px;
+     background-color: #5ca0f2;
+background-image: linear-gradient(315deg, #5ca0f2 0%, #f5f7f6 74%);		
+     overflow:hidden;
+	} 
+img{
+margin-left:25px;
+width:115px;
+height:100px;
+}
+.z-label{
+margin-top:50px;
+margin-left:50px;
+margin-right:27px;
+    line-height: normal;
+    float: right;
+    }
+
+.z-navitem-content {
+    color: #333;
+    display: block;
+    height: 40px;
+  
+    padding: 0 8px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    width: 143px;
+    line-height: 32px;
+}
+.table{
+margin-left:200px;
+margin-top:30px;
+width:550px;
+ height:100px;
+}
+
+   .z-hbox{ height: 100%;}
+   .z-button{
+   background:#91a5b3;
+   }
+   .z-column{
+   background:black;
+   }
+    .z-listheader {
+    border-left: black; 
+    border-bottom: 1px solid black; 
+    padding: 0;
+   
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.z-button{
+margin-left:100px;
+}
+.z-navbar-vertical>ul .z-nav-content, .z-navbar-vertical>ul .z-navitem-content, .z-navbar-vertical>ul .z-navseparator {
+background-color: #738bdc;
+background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+
+}
+ .z-nav-text, .z-navitem-text {
+    font-family:sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+}
+.z-navbar ul {
+   background-color: #738bdc;
+   background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    }
+       .z-nav-text, .z-navitem-text {
+    font-family:sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+}
+.z-navbar-vertical>ul .z-nav-content, .z-navbar-vertical>ul .z-navitem-content, .z-navbar-vertical>ul .z-navseparator {
+background-color: #738bdc;
+background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+
+} 
+.z-navbar ul {
+   background-color: #738bdc;
+   background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.z-listbox-header{
+	
+    text-align: inherit;
+    background-color: black;
+}
+.z-listhead-bar{
+ border-left: black; 
+    border-bottom: 1px solid black; 
+    }
+</style>
+
+<div sclass="header">
+		<div>
+			<image src="foodlogo.png" />
+		
+		</div>
+	</div>
+	<hbox>
+		<div sclass="navbar">
+			<vbox width="25px" height="100px">
+				<navbar orient="vertical" collapsed="false">
+					<navitem label="Dashboard"
+						iconSclass="z-icon-dashboard" 
+						href="Adminpage.zul" />
+					<nav label="Restuarants"
+						iconSclass="z-icon-coffee">
+						<navitem label="Add"
+							iconSclass="z-icon-plus-circle" href="Restaurantadd.zul" />
+						<navitem label="Update/Delete"
+							iconSclass="z-icon-edit" href="RestaurentUpdateDel.zul"/>
+						
+					</nav>
+					<nav label="Menu"
+						iconSclass="z-icon-tasks">
+						<navitem label="Add"
+							iconSclass="z-icon-plus-circle" href="menuadd.zul" />
+						<navitem label="View"
+							iconSclass="z-icon-youtube-play" href="Menu.zul"/>
+						
+					</nav>
+					<nav label="Items"
+						iconSclass="z-icon-beer">
+						<navitem label="Add"
+							iconSclass="z-icon-plus-circle" href="itemadd.zul" />
+						<navitem label="Update/Delete"
+							iconSclass="z-icon-edit" href="ItemList.zul"/>
+
+					</nav>
+					<navitem label="Orders"
+						iconSclass="z-icon-clipboard" href="Orderslist.zul"/>
+					<navitem label="Customers"
+						iconSclass="z-icon-users" href="Customers.zul"/>
+						
+						<navitem label="Sign Out" 	
+						iconSclass="z-icon-sign-out" href="login.zul"/>
+				</navbar>
+			</vbox>
+
+		</div>
+<div sclass="table" id="rest"  use="com.pennant.admin.restuarantupdel">
+<vbox>
+  <listbox id="restuarantUpdDel" width="600px" rows="5">
+		<listhead>
+			<listheader label="Restuarant Id" style="background-color:black;"/>
+			<listheader label="RestaurantName" style="background-color:black;" />
+			<listheader label="Phone" style="background-color:black;"/>
+			<listheader label="Location" style="background-color:black;"/>
+		</listhead>
+		<listitem>
+			<listcell id="Restuarantid"></listcell>
+            <listcell id="RestaurantName" label=" " />
+            <listcell id="PhoneNumber" label=" " />
+            <listcell id="Location" label=" " />
+        </listitem>
+	</listbox>
+	<hbox align="center">
+		
+		<button label="Update..." onClick="rest.onUpdate()" style="background-color:#096fe3;"/>
+		<button label="Delete" onClick="rest.onDelete()" style="background-color:#096fe3;"/>
+	</hbox>
+	</vbox>
+ </div>
+
+
+  </hbox>
+</zk>

@@ -1,0 +1,26 @@
+<zk>
+
+
+
+	<div align="center">
+		<window width="900px" height="300px" border="normal" forEach="1,2,3,4">
+			<label
+				style="color: blue;font-style:timesnewroman;font-size:30px;margin-right:600px;"
+				value="poorna suraksh">
+			</label>
+			<separator height="80px" />
+
+			<label
+				value="bvacfagfcjksabcfsakcsfcsaoiuhfcanbfvlahiakjnvaivjhjkbavfouiabjvaoivhvnvnnoi">
+			</label>
+			<separator height="70px" />
+			<hbox>
+				<button label="learn more" style="margin-left:700px;"></button>
+			</hbox>
+
+          
+		</window>
+		  <separator height="20px"></separator>
+	</div>
+</zk>
+

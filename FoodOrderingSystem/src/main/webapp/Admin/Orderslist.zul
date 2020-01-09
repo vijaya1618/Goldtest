@@ -1,0 +1,196 @@
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+	<style>
+		.header{
+		 width:1435px;
+		  height:15%;
+		 
+		    overflow:hidden;
+background-color: #5ca0f2;
+background-image: linear-gradient(315deg, #5ca0f2 0%, #f5f7f6 74%);		   
+		   padding:0px;
+		} 
+		.navbar{
+      width:100%;
+   height: 764px;
+     background-color: #5ca0f2;
+background-image: linear-gradient(315deg, #5ca0f2 0%, #f5f7f6 74%);		
+     overflow:hidden;
+	} 
+		img{
+		    margin-left:25px;
+		    width:115px;
+		    height:100px;
+		    } 
+		 .z-label{
+		  margin-top:28px;
+		  margin-left:50px;
+		  margin-right:27px;
+		  line-height: normal;
+		  float: right; 
+		} 
+		
+		.z-navitem-content { 
+		  color: #333;
+		  display: block;
+		  height: 40px;
+		
+		  padding: 0 8px;
+		  position: relative;
+		  overflow: hidden;
+		  text-decoration: none;
+		  width: 143px;
+		  line-height: 32px; 
+		} 
+		.table{
+		  margin-left:200px;
+		  margin-top:30px;
+		}
+		.boxing{
+
+        margin-top: 100px;
+    	margin-left: 140px;
+  	    background: rgba(0, 0,0, 0.3);
+  	    padding:20px;
+ 	    box-shadow: 2px 2px 10px;
+  	    border-radius: 3px;
+        }
+        .z-textbox{ margin-top:20px; }
+        .z-intbox{ margin-top:20px; }
+        .hbox{
+         margin-left:120px;
+         margin-bottom:10px;
+         color:black;
+         }
+         .slide{
+        
+         
+         background-color:white;
+         }
+         .label{
+         font-weight:bold;
+         font-style:italic;
+         font-size:20px;
+         }
+          .z-listheader {
+    border-left: black; 
+    border-bottom: 1px solid black; 
+    padding: 0;
+   
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+            .z-nav-text, .z-navitem-text {
+    font-family:sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+}
+.z-navbar-vertical>ul .z-nav-content, .z-navbar-vertical>ul .z-navitem-content, .z-navbar-vertical>ul .z-navseparator {
+background-color: #738bdc;
+background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+
+} 
+.z-navbar ul {
+   background-color: #738bdc;
+   background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.z-listbox-header{
+	
+    text-align: inherit;
+    background-color: black;
+}
+.z-listhead-bar{
+ border-left: black; 
+    border-bottom: 1px solid black; 
+    }
+	 </style>
+
+	<div sclass="header">
+		<div>
+			<image src="foodlogo.png" />
+		
+		</div>
+	</div>
+	<hbox>
+		<div sclass="navbar">
+			<vbox width="25px" height="100px">
+				<navbar orient="vertical" collapsed="false">
+					<navitem label="Dashboard"
+						iconSclass="z-icon-dashboard" 
+						href="Adminpage.zul" />
+					<nav label="Restuarants"
+						iconSclass="z-icon-coffee">
+						<navitem label="Add"
+							iconSclass="z-icon-plus-circle" href="Restaurantadd.zul" />
+						<navitem label="Update/Delete"
+							iconSclass="z-icon-edit" href="RestaurentUpdateDel.zul"/>
+						
+					</nav>
+					<nav label="Menu"
+						iconSclass="z-icon-tasks">
+						<navitem label="Add"
+							iconSclass="z-icon-plus-circle" href="menuadd.zul" />
+						<navitem label="View"
+							iconSclass="z-icon-youtube-play" href="Menu.zul"/>
+						
+					</nav>
+					<nav label="Items"
+						iconSclass="z-icon-beer">
+						<navitem label="Add"
+							iconSclass="z-icon-plus-circle" href="itemadd.zul" />
+						<navitem label="Update/Delete"
+							iconSclass="z-icon-edit" href="ItemList.zul"/>
+
+					</nav>
+					<navitem label="Orders"
+						iconSclass="z-icon-clipboard" href="Orderslist.zul"/>
+					<navitem label="Customers"
+						iconSclass="z-icon-users" href="Customers.zul"/>
+						
+						<navitem label="Sign Out" 	
+						iconSclass="z-icon-sign-out" href="login.zul"/>
+				</navbar>
+			</vbox>
+
+		</div>
+		<vbox>
+        <div  id="Orderslistwnd" sclass="table"  use="com.pennant.admin.OrderslistWnd">
+           <vbox>
+	          <listbox id="orders" width="600px" rows="4">
+	        	<listhead>
+			       <listheader label="Order_Id" style="background-color:black;"/>
+			       <listheader label="Cust_Id" style="background-color:black;"/>
+			        <listheader label="Restaurent Name" style="background-color:black;"/>
+			       <listheader label="Status" style="background-color:black;"/>
+		        </listhead>
+	          </listbox>
+	          <hbox>
+		         <button label="Update..." style="background-color:black;" Sclass="slide" onClick="Orderslistwnd.onUpdate()"  />
+		      
+	          </hbox>
+	      </vbox>
+        </div>
+        
+        <div  sclass="table"  use="com.pennant.admin.OrderslistWnd">
+           <vbox>
+	          <listbox id="orders1" width="600px" rows="4">
+	        	<listhead>
+			       <listheader label="Order_Id" style="background-color:black;"/>
+			       <listheader label="Cust_Id" style="background-color:black;"/>
+			         <listheader label="Restaurent Name" style="background-color:black;"/>
+			       <listheader label="Status" style="background-color:black;"/>
+		        </listhead>
+	          </listbox>
+
+	      </vbox>
+        </div>
+        </vbox>
+      </hbox>
+
+</zk>

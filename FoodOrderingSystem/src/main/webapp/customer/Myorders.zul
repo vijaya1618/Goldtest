@@ -1,0 +1,114 @@
+
+<?page title="Customerorders" contentType="text/html;charset=UTF-8"?>
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+<style>
+
+.body {
+    margin: 0;
+    padding: 0 0px;
+}
+
+     .boxing{
+       border-radius:0px;
+       float:left;
+       margin-top:50px;
+       margin-left:70px;
+       padding:30px;
+       height:300px;
+       width:250px;
+     }
+     .button{
+       padding: 1px 7px;
+       margin-top:50px;
+    }
+    .z-button{
+    background-color:#C74044 ;
+    color:white;
+    }
+    .z-listheader {
+    border-left: 1px solid #060606;
+    border-bottom: 1px solid #040404;
+    }
+      .navbar{
+         margin-left: 151px;
+    margin-top: 50px;
+    border: 0px;
+	
+ 
+   	
+  }
+   
+.z-navbar ul {
+ 	background-color: rgba(0,0,0,0);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.z-navbar-horizontal {
+    padding: 4px 2px;
+    margin-left:164px;
+    margin-top:-43px;
+}
+    
+</style>
+
+
+
+      
+      
+<div Style="background-color: #b196232e;" width="100%" height="100%">
+<hbox  width="100%">
+         <image src="foodlogo.png" width="150px" height="90px"></image>
+           <space /><space />
+          <div sclass="navbar"  > 
+             <navbar orient="horizontal"  style="border:none" collapsed="false">
+             <navitem label="Home" iconSclass="z-icon-home" href="customer.zul"/>
+					<nav label="Profile"  iconSclass="z-icon-user" >
+						<navitem label="Customer Profile"
+							iconSclass="z-icon-user" href="Customerprofile.zul" />
+						
+					</nav>
+					<navitem label="My Orders" iconSclass="z-icon-list" href="Myorders.zul"/>
+					<navitem label="Cart" iconSclass="z-icon-shopping-cart" href="cart.zul"/>
+					<navitem label="Logout" iconSclass="z-icon-sign-out" href="../Admin/login.zul"/>
+				
+				</navbar>
+          </div>
+      </hbox>
+  <div id="Custord" hflex="min" vflex="min"  width="700px" class="myorders" use="com.pennant.customer.MyOrders">
+     <vbox sclass="boxing">
+		<hbox>
+			<label value="My Orders" style="font-family: Georgia, serif;font-size: 30px;color:black "/>
+		</hbox>
+		  <space width="10px"/>
+         <listbox id="myorders" hflex="min" vflex="min"  width="600px" multiple="true" >
+           <listhead>
+             <listheader label="Order Id" style="background-color:#EC8B5E;font-family:Trebuchet MS; font-size: 20px;" width="100px"></listheader>
+             
+             <listheader label="Order Amount" style="background-color:#EC8B5E;font-family:Trebuchet MS; font-size: 20px;" width="150px"></listheader>
+             <listheader label="Date" style="background-color:#EC8B5E;font-family:Trebuchet MS; font-size: 20px;" width="150px"></listheader>
+             <listheader label="Payment Type" style="background-color:#EC8B5E;font-family:Trebuchet MS; font-size: 20px;" width="150px"></listheader>
+              <listheader label="Status" style="background-color:#EC8B5E;font-family:Trebuchet MS; font-size: 20px;" width="140px"></listheader>
+          </listhead>
+          <template name="model">
+           <listitem>
+             <listcell label=""/>
+             <listcell label=""/>
+             <listcell label=""/>
+             <listcell label=""/>
+             <listcell label=""/>
+           </listitem>
+        </template>
+      </listbox>
+     
+      <hlayout>
+	   
+	     <button type="button" style=" margin-left: 350px;background-color:#EC8B5E" id="view" onClick="Custord.onView()">View</button>
+	  </hlayout>
+    </vbox>
+    
+  </div>  
+  </div>
+</zk>

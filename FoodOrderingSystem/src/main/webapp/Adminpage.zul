@@ -1,0 +1,252 @@
+<zk>
+	<style>
+		.header{
+		 width:1418px;
+		  height:15%;
+		 
+		   
+background-color: #5ca0f2;
+background-image: linear-gradient(315deg, #5ca0f2 0%, #f5f7f6 74%);		   
+		   padding:0px;
+		} 
+		img{
+		    margin-left:25px;
+		    width:115px;
+		    height:100px;
+		    } 
+		    .z-label{
+		  margin-top:28px;
+		  margin-left:50px;
+		  margin-right:50px;
+		  line-height: normal;
+		  float: right; 
+		} 
+	
+		.z-navitem-content { 
+		  color: #333;
+		      font-size: 16px;
+		  display: block;
+		  height: 40px;
+		  border: 1px solid #f4f4f3;
+		  padding: 0 8px;
+		  position: relative;
+		  overflow: hidden;
+		  text-decoration: none;
+		  width: 143px;
+		  line-height: 32px; 
+		} 
+		
+		.boxing{
+
+        margin-top: 100px;
+    	margin-left: 140px;
+  	    background: rgba(0, 0,0, 0.3);
+  	    padding:20px;
+ 	    box-shadow: 2px 2px 10px;
+  	    border-radius: 3px;
+}
+.z-textbox{
+margin-top:20px;
+
+
+}
+.z-intbox{
+margin-top:20px;
+
+
+}
+.hbox{
+  margin-left:120px;
+  margin-bottom:10px;
+  color:black;
+ }
+ .slide{
+margin-left: 141px;
+margin-right:80px;
+margin-top:20px;
+color:black;
+background-color:white;
+
+}
+.label{
+font-weight:bold;
+ font-style:italic;
+  font-size:20px;
+}
+.z-button{
+background-color:#8c949a;
+margin-left:90px;
+}
+.z-listheader {
+background:#93abbb;
+    BACKGROUND-COLOR:#363636;
+        font-family: sans-serif;
+}
+.navbar{
+    width:100%;
+    height:170%;
+     background-color: #5ca0f2;
+background-image: linear-gradient(315deg, #5ca0f2 0%, #f5f7f6 74%);		
+    
+	} 
+	.box{
+	margin-top:20px;
+	
+	}
+	.z-listcell-content {
+    margin-left: 55px;
+   
+    padding-left: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+        padding-top: -2px;
+}
+     .z-listbox{
+    margin-right: 134px;
+    margin-top:50px;
+    
+    }
+    z-nav-text, .z-navitem-text {
+    font-family: cursive;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+}
+   .z-nav-text, .z-navitem-text {
+    font-family:sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+}
+.z-navbar-vertical>ul .z-nav-content, .z-navbar-vertical>ul .z-navitem-content, .z-navbar-vertical>ul .z-navseparator {
+background-color: #738bdc;
+background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+
+} 
+.z-navbar ul {
+   background-color: #738bdc;
+   background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+	</style>
+
+	<div sclass="header">
+		<div>
+			<image src="foodlogo.png" />
+			<label value="Logout" 	/>
+			<space />
+			<label value="Profile" />
+		</div>
+	</div>
+	<hbox>
+		<div sclass="navbar">
+			<vbox width="25px" height="100px">
+				<navbar orient="vertical" collapsed="false">
+					<navitem label="Dashboard"
+						iconSclass="z-icon-dashboard" 
+						href="#" />
+					<nav label="Restuarants"
+						iconSclass="z-icon-coffee">
+						<navitem label="Add"
+							iconSclass="z-icon-plus-circle" href="restuarentadd.zul" />
+						<navitem label="Update/Delete"
+							iconSclass="z-icon-edit" />
+
+					</nav>
+					<navitem label="Orders"
+						iconSclass="z-icon-clipboard" />
+					<navitem label="Customers"
+						iconSclass="z-icon-users" />
+				</navbar>
+			</vbox>
+
+		</div>
+<div sclass="box" id="dash" use="com.pennant.admin.dashcontrol">
+<vbox>
+<hbox>
+	<space/><space/><space/>
+	<listbox id="totalOrders" width="150px" height="80px" rows="2">
+		<listhead>
+			<listheader label="Total Orders"  />
+		</listhead>
+		<listitem>
+		<listcell></listcell>
+		</listitem>
+	</listbox>
+
+
+	<listbox id="delivery" width="150px" height="80px" rows="2">
+		<listhead>
+			<listheader label="Delivered Orders"  />
+		</listhead>
+		<listitem>
+		<listcell></listcell>
+		</listitem>
+	</listbox>
+	
+	
+	<listbox id="cancelled" width="150px" height="80px" rows="2">
+		<listhead>
+			<listheader label="Cancelled Orders"  />
+		</listhead>
+		<listitem>
+		<listcell></listcell>
+		</listitem>
+	</listbox>
+	
+	<listbox id="Preparingorders" width="150px" height="80px" rows="2">
+		<listhead>
+			<listheader label="Preparing Orders"  />
+		</listhead>
+		<listitem>
+		<listcell></listcell>
+		</listitem>
+	</listbox>
+	</hbox>
+	<separator></separator><separator></separator>
+	<separator></separator><separator></separator>
+	<separator></separator><separator></separator>
+	<separator></separator><separator></separator>
+	
+	<hbox>
+	<space/><space/><space/>
+	<listbox id="Pickuporders" width="160px" height="80px" rows="2">
+		<listhead>
+			<listheader label="Pickup Orders"  />
+		</listhead>
+		<listitem>
+		<listcell></listcell>
+		</listitem>
+	</listbox>
+	
+	<listbox id="confirmorders" width="150px" height="80px" rows="2">
+		<listhead>
+			<listheader label="Confirmed Orders"  />
+		</listhead>
+		<listitem>
+		<listcell></listcell>
+		</listitem>
+	</listbox>
+	
+	<listbox id="TotalUsers" width="150px" height="80px" rows="2">
+		<listhead>
+			<listheader label="Total Users"  />
+		</listhead>
+		<listitem>
+		<listcell label="120"> </listcell>
+		</listitem>
+	</listbox>
+	
+	</hbox>
+	</vbox>
+	</div>
+
+ 
+ 
+</hbox>
+
+
+</zk>

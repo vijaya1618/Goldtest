@@ -1,0 +1,58 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+<style>
+.boxing{
+       border-radius:0px;
+       float:left;
+       margin-top:80px;
+       padding:40px;
+           padding-top: 66px;
+       box-shadow: 2px 2px 8px;
+     }
+element.style {
+    padding-top: 75px;
+    margin-left: 90px;
+    border=normal: ;
+} 
+.logo{
+margin-bottom:50px;
+
+}
+
+z-image {
+    width: 100px;
+    height: 84px;
+    margin-top: 429px;
+    margin-left: -94px;
+}
+
+</style>
+	<div
+		Style="background-image:url('moto.png');background-repeat: no-repeat;
+  				-moz-background-size: cover; -o-background-size: cover; background-size: cover;"
+		width="100%" height="100%" id="confirm" use="com.pennant.customer.Confirmationcontrol">
+		<div sclass="boxing"  style="padding-top:30px; margin-left:90px;border:normal">
+		<separator></separator>
+		<separator></separator>
+			<label value="Your Order is Confirmed Successfully" style="font-family:Trebuchet MS; font-size: 30px;color:white">
+			</label>
+		<separator></separator>
+	<separator></separator>
+			<label value="We will deliver in few minutes" style="font-family:Trebuchet MS; font-size: 30px;color:black"></label>
+			<separator />
+			<separator />
+	<separator></separator>
+	
+			<button type="button" id="ok" style="background-color:black;font-family:Trebuchet MS;font-size: 20px;" onClick="confirm.goHome()">Ok</button>
+		
+			<button type="button" id="feedback" style="background-color:black;font-family:Trebuchet MS;font-size: 20px;" onClick="confirm.goFeedBack()">Feedback </button>
+		</div>
+
+	<div sclass="logo z-div"  >
+ 	<image src="foodlogo.png" style="margin-top: 430px; margin-left: -90px;" width="117px" height="85px"/>
+
+</div>
+
+	</div>
+</zk>

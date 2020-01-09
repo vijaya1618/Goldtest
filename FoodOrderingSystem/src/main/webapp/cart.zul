@@ -1,0 +1,147 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+  <style>
+    .cart{
+       margin-left:40px;
+       margin-top:10px;
+     }
+     .boxing{
+       border-radius:0px;
+       float:left;
+       margin-top:45px;
+       margin-left:600px;
+       padding:30px;
+       box-shadow: 2px 2px 10px;
+       height:350px;
+       width:400px;
+     }
+     .button{
+       padding: 0px 8px;
+       style:Georgia, serif;
+    }
+    .rosh{
+    margin-left:3px;
+    }
+    .Taxes{
+    margin-left:45px;
+    }
+    .Charges{
+    margin-left:-54px;
+    margin-right:50px;
+    }
+    .Grand{
+    margin-left:-38px;
+    margin-right:50px;
+    }
+    .Oreo{
+    margin-left:40px;
+    }
+    .Bir{
+    margin-left:40px;
+    }
+    .z-button{
+    background-color:#C74044 ;
+    color:white;
+    }
+    .name
+    {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color:black;
+    }
+  </style>
+   <div Style="background-image:url('menu-.jpg'); background-repeat:no-repeat;background:cover;" width="100%" height="100%">
+   <div>
+     <vbox sclass="boxing">
+				<hbox>
+			
+					<label value="CART" style="font-family: Georgia, serif;color:black;font-size:40px;"/> 
+									</hbox>
+				  <space width="10px"/>
+				<vlayout>
+				    <hbox>
+					  <cell>
+						<label  value="Items"  style="font-size: 35px;color:white;"/>
+				      </cell>
+				    </hbox>
+				    <hbox>
+				      <cell>
+						 <label value="Oreo shake" style="font-family: Georgia, serif;font-size: 20px;color:black;" id="item1"  ></label><space width="140px"></space>
+						 <button label="-"  sclass="button" style="background-color:#C74044;"/><space width="10px"></space>
+						 <label  value="0"/><space width="10px"></space>
+						 <button label="+"  sclass="button"  style="background-color:#C74044;"/>
+					  </cell>
+			 	   </hbox>
+				   <hbox>
+					  <cell>
+					     <label value="₹150.00" id="" /><space width="170px"></space>
+					     <label sclass="Oreo" value="₹150.00"/>
+					  </cell>
+				   </hbox>
+				   <hbox>
+				      <cell>
+						 <label value="Biryani" style="font-family: Georgia, serif;font-size: 20px;color:black;" id="item2"></label><space width="175px"></space>
+						 <button label="-"  sclass="button" style="background-color:#C74044"/><space width="10px"></space>
+						 <label  value="0"/><space width="10px"></space>
+						 <button label="+"  sclass="button" style="background-color:#C74044;"/>
+					  </cell>
+				   </hbox>
+				   <hbox>
+					  <cell>
+					     <label value="₹180.00" id="price1"/><space width="170px"></space>
+					     <label sclass="Bir" value="₹180.00" id="price2"/>
+					  </cell>
+				   </hbox>
+				</vlayout>
+				  <space/>
+				<vlayout>
+				    <hbox>
+					   <label value="Price" style="font-size: 30px;color:white;"/>
+				    </hbox>
+				    <hbox>
+					  <cell>
+					     <label value="Item Total"  style="font-family: Georgia, serif;font-size: 20px;color:black;" id="itemtotal"/><space width="170px"></space>
+					     <label sclass="rosh" value="₹644.00" id="itemtotal1"/>
+					  </cell>
+					</hbox>
+					 <hbox>
+					  <cell>
+					     <label value="Taxes" style="font-family: Georgia, serif;font-size: 20px;color:black;" id="taxs"/><space width="170px"></space>
+					     <label  sclass="Taxes" value="₹76.44" id="taxs1"/>
+					  </cell>
+					</hbox>
+					 <hbox>
+					  <cell>
+					     <label value="Delivery Charges" style="font-family: Georgia, serif;font-size: 20px;color:black;" id="deliverycharges"/><space width="170px"></space>
+					     <label   sclass="Charges" value="₹10.00" id="deliverycharges1"/>
+					  </cell>
+					</hbox>
+					 <hbox>
+					  <cell>
+					     <label value="Grand Total"  style="font-family: Georgia, serif;font-size: 25px;color:black;" id="grandtotal"/><space width="170px"></space>
+					     <label sclass="Grand" value="₹730.00" id="grandtotal1"/>
+					  </cell>
+					</hbox> 
+				</vlayout>
+				    <space/>
+				<vlayout>
+				    <hbox>
+				        <label value="Ordering For" style="font-family: Georgia, serif;font-size: 25px;color:white;"/>
+				    </hbox>
+				    <hbox>
+				        <label value="Roshini,8976545674" style="font-size: 20px;" id="orderperson"/><space width="70px"/>
+				        <button label="Change"  sclass="button" style="background-color:#C74044;"/>
+				    </hbox>
+				</vlayout>
+				   <space/>
+				   <hbox>
+				        <label value="(Orders are placed can not be Cancelled and Re-fundable)" style="font-family:Trebuchet MS;color:black;font-size: 18px;"/>
+				    </hbox>
+				       <space/>
+				    <hbox>
+				    <button type="button" id="button1" sclass="z-button" style=" margin-left: 198px;background-color:#C74044;">Select Address at Next Step</button>
+				    </hbox>
+     </vbox>
+     </div>
+  </div>
+</zk>

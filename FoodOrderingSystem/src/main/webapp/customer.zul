@@ -1,0 +1,156 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<style>
+.z-hlayout-inner{ 
+    vertical-align: baseline
+    
+}
+.maintab{
+  margin-left:900px;
+  margin-top:50px;
+  width:200px;
+}
+
+        .z-tabs{ background: #34445a; padding-right:135px;}
+        .z-tab-selected{background: #34445a;}
+        .z-tab-selected:hover{background: #34445a;}
+        .z-tab{background: #34445a;}
+        .z-tab-text {color: #c1bfbf;}
+        .z-tab-selected{border-bottom: 1.5px solid #f90039;}
+        .z-tab-selected .z-tab-text{color: #f5f5f5;}
+        .z-tab-selected .z-tab-text:hover {color: #f91c45;}
+        .z-tab:hover{background:none;}
+        .z-tab-text:hover {color:#f91c45;}
+        .z-tabs-content{width: 40%;margin: 0 auto;}
+ .logbtn{
+         color:white;
+         background-color: black;
+         margin-top:65px;
+         margin-left:50px;
+         margin-right:"20px"
+         font-size: 13px;
+         border-radius: 10px;
+         padding: 5px 8px;
+         hover:none;
+         }
+.subnav{
+margin-top:50px;
+margin-left:300px;
+border:0px;
+}
+.subdiv{
+   margin-left:85px;
+}
+.subdiv1{
+   margin-left:210px;
+   margin-top:60px;
+}
+.pavan{
+margin-top:60px;
+margin-left:20px;
+}
+.search{
+margin-top:45px;
+margin-left:30px;
+}
+.bg{
+background-color:orange;
+}
+.divalign{
+margin-top:45px;
+}
+ .z-tab{
+     background: #331f00;
+     } 
+ .z-tabs {
+    background: #34445a;
+    padding-right: 420px;
+}
+</style>
+
+
+     <hbox style="background-image: linear-gradient(to right top, #e6eaeb, #e3e8e7, #e2e5e2, #e2e2de, #e3dfdb); " width="100%">
+         <image src="foodlogo.png" width="150px" height="90px"></image>
+           <space /><space />
+          <div sclass="maintab"> 
+             <tabbox id="menu">
+                <tabs id="tab1">
+                   <tab id="profile" label="Profile"/>
+                   <tab id="cart" label="My Orders"/>
+                 </tabs>
+              </tabbox>
+          </div>
+          <button type="button" sclass="logbtn" id="logout">LOGOUT</button>
+      </hbox>
+
+    <div sclass="naga" Style="background-image:url('foodie.jpg'); background-repeat:no-repeat;background:cover;" width="100%" height="500px">
+    </div>
+     <separator></separator>
+    <div style="background-color: #262626" width="1400px" height="850px">
+       <hlayout>
+          <div>
+            <vbox sclass="subdiv">
+               <image src="dolphin.jpg" id="dolphin" sclass="divalign" width="350px" height="300px"></image>
+               <label value="DOLPHIN" style="font-family:Trebuchet MS;font-size: 30px;color:white"/>
+               <label value="Dabagardens,Visakhapatnam" style="font-family: Georgia, serif;font-size: 20px; color:white"/>
+            </vbox>
+          </div>
+           <div>
+            <vbox sclass="subdiv">
+               <image src="My Resturaent.jpg" id="myresturaent" sclass="divalign" width="350px" height="300px"></image>
+               <label value="MyRestaurent" style="font-family:Trebuchet MS;font-size: 30px;color:white"/>
+               <label value="Madhilapalem,Visakhapatnam" style="font-family: Georgia, serif;font-size: 20px; color:white"/>
+            </vbox>
+          </div>
+            <div>
+            <vbox sclass="subdiv">
+              <image src="biryani-bowl.jpg" id="biryanibowl" sclass="divalign" width="350px" height="300px"></image>
+              <label value="Biryani Bowl" style="font-family:Trebuchet MS;font-size: 30px;color:white"/>
+              <label value="Hanumanthavaka,Visakhapatnam" style="font-family: Georgia, serif;font-size: 20px; color:white"/>
+            </vbox>
+          </div>
+         </hlayout>
+      <hlayout>
+             <div>
+            <vbox sclass="subdiv">
+               <image src="Helapuri.jpg" id="helapuri" sclass="divalign" width="350px" height="300px"></image>
+               <label value="Helapuri" style="font-family:Trebuchet MS;font-size: 30px; color:white"/>
+               <label value="PMPalem,Visakhapatnam" style="font-family: Georgia, serif;font-size: 20px; color:white"/>
+            </vbox>
+          </div>
+          <div>
+            <vbox sclass="subdiv">
+              <image src="Hot and Spicy.jpg" id="hotandspicy" sclass="divalign" width="350px" height="300px"></image>
+              <label value="Hot and Spicy" style="font-family:Trebuchet MS;font-size: 30px; color:white"/>
+              <label value="Rushikonda,Visakhapatnam" style="font-family: Georgia, serif;font-size: 20px; color:white"/>
+            </vbox>
+          </div>
+           <div>
+            <vbox sclass="subdiv">
+               <image src="chikoss.jpg" id="chikoss" sclass="divalign" width="350px" height="300px"></image>
+               <label value="Chikoos" style="font-family:Trebuchet MS;font-size: 30px; color:white"/>
+               <label value="Madhurawada,Visakhapatnam" style="font-family: Georgia, serif;font-size: 20px; color:white"/>
+            </vbox>
+          </div>
+     </hlayout>
+   </div> 
+   <div height="350px" width="1415px" style="background-image: linear-gradient(to right top, #e6eaeb, #e3e8e7, #e2e5e2, #e2e2de, #e3dfdb);">
+          <hlayout>
+          <div>
+            <vbox sclass="subdiv1">
+               <image src="cook1.png"  width="180px" height="180px"></image>
+            </vbox>
+          </div>
+           <div>
+            <vbox sclass="subdiv1">
+               <image src="icon-delivery-18.jpg" width="180px" height="180px"></image>
+            </vbox>
+          </div>
+            <div  style="hover(spinOnce);">
+            <vbox sclass="subdiv1">
+              <image src="d.png" width="180px" height="180px"></image>
+            </vbox>
+          </div>
+         </hlayout>
+   </div>
+</zk>

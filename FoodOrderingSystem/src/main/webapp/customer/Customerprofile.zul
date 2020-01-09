@@ -1,0 +1,102 @@
+<?page title="Customerprofile" contentType="text/html;charset=UTF-8"?>
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+<style>
+    .profile{
+       margin-left:0px;
+       margin-top:0px;
+     }
+     .boxing{
+       border-radius:0px;
+       float:left;
+       margin-top:120px;
+       margin-left:160px;
+       padding:30px;
+       box-shadow: 2px 2px 8px;
+       height:300px;
+       width:250px;
+     }
+     .button{
+       padding: 1px 7px;
+    }
+     .z-button{
+    background-color: #462b1b;
+    color:white;
+    }
+    .rosh{
+    border-left:80px;
+    border-right:10px;
+   
+    }
+    .navbar{
+      margin-left:300px;
+     margin-top:50px;
+	
+    border:0px;
+   	
+  }
+   
+.z-navbar ul {
+ 	background-color: rgba(0,0,0,0);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.z-navbar-horizontal {
+    padding: 4px 2px;
+    margin-left:164px;
+    margin-top:-43px;
+}
+</style>
+ <div id="customer"  Style="background-image:url('g1.jpg'); background-repeat:no-repeat;background:cover;" width="100%" height="100%" use="com.pennant.customer.Customerprofilewnd">
+ <hbox style="background-image:url('g1.jpg');" width="100%">
+         
+           <space /><space />
+          <div sclass="navbar"  > 
+             <navbar orient="horizontal"  style="border:none" collapsed="false">
+             <navitem label="Home" iconSclass="z-icon-home" href="customer.zul"/>
+					<nav label="Profile"  iconSclass="z-icon-user" >
+						<navitem label="Customer Profile"
+							iconSclass="z-icon-user" href="Customerprofile.zul" />
+						
+					</nav>
+					<navitem label="My Orders" iconSclass="z-icon-list" href="Myorders.zul"/>
+					<navitem label="Cart" iconSclass="z-icon-shopping-cart" href="cart.zul"/>
+					<navitem label="Logout" iconSclass="z-icon-sign-out" href="../Admin/login.zul"/>
+				
+				</navbar>
+          </div>
+      </hbox>
+   <div class="profile" >
+   
+       <vbox sclass="boxing">
+				<hbox>
+					<label value="Profile" style="font-family:Trebuchet MS; font-size: 30px;color:black"/>
+				</hbox>
+				<hbox>
+				    <button type="button" id="change" sclass="z-button" style=" margin-left: 270px;background-color:#EC8B5E;" onClick="customer.onUpdate()">Edit</button>
+				</hbox><space  width="10px" />
+				<vlayout>
+				  <hbox>
+				     <label value="First Name:"  style="font-family: Georgia, serif;font-size: 20px;color:black" /><space  width="10px" />
+				    <space width="32px"></space>  <label id="firstname" style="font-family: Georgia, serif;font-size: 20px;color:black"/>
+				   </hbox>
+				   <hbox>
+				       <label value="Last Name:"  style="font-family: Georgia, serif;font-size: 20px;color:black" /><space  width="10px" />
+				   <space width="35px"></space>  <label id="lastname" style="font-family: Georgia, serif;font-size: 20px;color:black"/>
+				   </hbox>
+				   <hbox>
+				       <label sclass="rosh" value="Email:"  style="font-family: Georgia, serif;font-size: 20px;color:black" /><space  width="10px" />
+				   <space width="78px"></space>  <label id="email" style="font-family: Georgia, serif;font-size: 20px;color:black"/>
+				   </hbox>
+				   <hbox>
+				      <label value="phone Number:"  style="font-family: Georgia, serif;font-size: 20px;color:black" /><space  width="10px" />
+				     <label id="phone" style="font-family: Georgia, serif;font-size: 20px;color:black"/>
+				   </hbox><space  width="10px"/>
+				  
+			   </vlayout>
+	   </vbox>
+   </div>
+</div>
+</zk>

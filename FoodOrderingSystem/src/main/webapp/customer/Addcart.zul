@@ -1,0 +1,109 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+
+<zk>
+<window id="acart"   position="top,center" border="normal" width="500px" use="com.pennant.customer.AddCtrl" >
+  <style>
+  .z-button {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    color: #fff;
+  
+    border: 2px solid transparent;
+    
+    
+    border-radius: 4px;
+    padding: 8px 16px;
+    line-height: 16px;
+    background-color:black;
+    
+    cursor: pointer;
+    white-space: nowrap;
+    }
+   .z-button:active {
+    color: #fff;
+    border-color: transparent;
+    background-color:black;
+}
+.z-button:hover {
+    color: #fff;
+    border-color: transparent;
+ background-color:black;
+}
+.z-button:focus {
+    color: #fff;
+    border-color: transparent;
+ background-color:black;
+} 
+
+   .z-label {
+    margin-top: 4px;
+    margin-left: 0px;
+    margin-right: 37px;
+    line-height: normal;
+    float: right;
+    }
+    .qty{
+    margin-top: 4px;
+    margin-left: 0px;
+    margin-right: 4px;
+    line-height: normal;
+    float: right;
+    }
+ .line {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    color: rgba(0,0,0,0.9);
+    line-height: 1.3em;
+    overflow: hidden;
+    padding: 12px 16px;
+    margin-right: 93px;
+}
+.buttn{
+margin-left: 55px;
+}
+.z-grid {
+    background: #fff;
+   
+    overflow: hidden;
+    zoom: 1;
+}
+   </style>
+	<vbox>
+		<grid width="405px">
+		<columns>
+			<column width="200px"/>
+			<column width="200px"/>
+		</columns>
+		<rows>
+			<row >
+				Item Name: 
+				<label id="Itemname"  sclass="line"/>
+			</row>
+			
+		
+			<row>
+				Quantity: 
+			<hbox>
+		<button onClick="acart.dec()">-</button>
+				<label value="1" Sclass="qty" id="count"/>
+				<button onClick="acart.inc()">+</button>
+				</hbox>
+			</row>
+				<row >
+				Total price: 
+				<label id="TotalPrice" sclass="line"/>
+			</row>
+			
+		</rows>
+		</grid>
+		<hbox>
+			<button sclass="buttn" label="Add To Cart" onClick="acart.Add()"/><space width="10px"/>
+			<button sclass="buttn" label="Go To Cart" onClick="acart.cart()"/>
+		</hbox>
+	</vbox>
+</window>
+</zk>

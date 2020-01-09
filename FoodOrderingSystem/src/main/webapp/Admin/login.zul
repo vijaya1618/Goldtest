@@ -1,0 +1,101 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<style>
+.z-label{
+color:white;
+margin-left:35px;
+}
+
+.z-window{
+ padding:0px;
+ }
+ .z-textbox{
+ color:black;
+ background-color:lightgrey;
+}
+.z-intbox{
+color:black;
+background-color:lightgrey;
+}
+.register{
+  background-color:white;
+ 
+  text-color:white;
+  
+}
+.slide{
+margin-left: 135px;
+    margin-right: 42px;
+margin-top:20px;
+color:black;
+background-color:white;
+}
+.boxing{
+border-radius:4px;
+float:left;
+margin-top:150px;
+margin-left:50px;
+ text-color:cyan;
+  background: rgba(0, 0,0, 0.3);
+  padding:30px;
+  box-shadow: 2px 2px 10px;
+}
+.sun{
+    width: 40%;
+    height: 65%;
+    margin-left:10px;
+ 
+  }
+  
+  .hbox{
+  margin-left:120px;
+  margin-bottom:10px;
+
+  color:black;
+ }
+ .abc{
+ color:black;
+
+ 
+ }
+.abc:hover{
+color:#99dfff;
+
+}
+ img { width: 157px; height: 110px;  margin-top: 15px; margin-left: 33px;}
+</style>
+
+<div id="reg" use="com.pennant.admin.control" sclass="register" Style="background-image:url('Lunch.jpg');background-repeat: no-repeat;-webkit-background-size: cover;
+  -moz-background-size: cover; -o-background-size: cover; background-size: cover;"  width="100%" height="100%">
+<div><image src="foodlogo.png"  /></div>
+<vbox sclass="boxing" >
+<hbox sclass="hbox">
+Login
+</hbox>
+
+<hbox>
+<label  value="E-mail ID"/><space width="86px"></space>
+<textbox id="email" width="150px" placeholder="Pennant@tech.com"
+                constraint="/.+@.+\.[a-z]+/: Please enter an e-mail address" />
+</hbox>
+
+<hbox>
+<label  value="Password"/><space width="80px"></space>
+<textbox id="password" type="password" placeholder="Password"  width="150px" />
+</hbox>
+
+                         <hlayout>
+                            <button sclass="slide" label="Sign in" onClick="reg.verifyLogin()"
+                                width="130px" height="30px" />
+                              
+                        </hlayout>
+                        <hbox >
+                        <a href="registerpage.zul" Sclass="abc">Didn't  have a Account,Register here..!</a>
+               			  <a label="Forgot Password" sclass="abc" width="130px" height="30px"  onClick="reg.pressButton()" />
+                        </hbox>
+                        
+</vbox><separator/><separator/>
+                     
+
+</div>
+</zk>

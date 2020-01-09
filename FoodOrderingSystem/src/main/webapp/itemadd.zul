@@ -1,0 +1,157 @@
+<zk>
+	<style>
+		.header{
+		 width:1418px;
+		  height:15%;
+		   background:lightgrey; 
+		   padding:0px;
+		} 
+		img{
+		    margin-left:25px;
+		    width:115px;
+		    height:100px;
+		    } 
+		    .z-label{
+		  margin-top:28px;
+		  margin-left:50px;
+		  margin-right:27px;
+		  line-height: normal;
+		  float: right; 
+		} 
+		.navbar{
+		  width: 100%;
+		  height: 165%; 
+		  background:lightgrey;  
+		}
+		.z-navitem-content { 
+		  color: #333;
+		  display: block;
+		  height: 40px;
+		  border: 1px solid #f4f4f3;
+		  padding: 0 8px;
+		  position: relative;
+		  overflow: hidden;
+		  text-decoration: none;
+		  width: 143px;
+		  line-height: 32px; 
+		} 
+		.table{
+		  margin-left:200px;
+		  margin-top:30px;
+		}
+		.boxing{
+
+        margin-top: 100px;
+    	margin-left: 140px;
+  	    background: rgba(0, 0,0, 0.3);
+  	    padding:20px;
+ 	    box-shadow: 2px 2px 10px;
+  	    border-radius: 3px;
+}
+.z-textbox{
+margin-top:20px;
+margin-right:5px;
+
+
+}
+.z-intbox{
+margin-top:20px;
+
+
+}
+.hbox{
+  margin-left:120px;
+  margin-bottom:10px;
+  color:black;
+ }
+ .slide{
+margin-left: 141px;
+margin-right:80px;
+margin-top:20px;
+color:black;
+background-color:white;
+
+}
+.label{
+font-weight:bold;
+ font-style:italic;
+  font-size:20px;
+  
+}
+.z-navbar-vertical>ul .z-nav-content, .z-navbar-vertical>ul .z-navitem-content, .z-navbar-vertical>ul .z-navseparator {
+background-color: #738bdc;
+background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+
+} 
+.z-navbar ul {
+   background-color: #738bdc;
+   background-image: linear-gradient(315deg, #738bdc 0%, #48c3eb 74%);
+    border: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+	</style>
+
+	<div sclass="header">
+		<div>
+			<image src="foodlogo.png" />
+			<label value="Logout" 	/>
+			<space />
+			<label value="Profile" />
+		</div>
+	</div>
+	<hbox>
+		<div sclass="navbar">
+			<vbox width="25px" height="100px">
+				<navbar orient="vertical" collapsed="false">
+					<navitem label="Dashboard"
+						iconSclass="z-icon-dashboard"  />
+					<nav label="Restuarants"
+						iconSclass="z-icon-coffee" >
+						<navitem label="Add"
+							iconSclass="z-icon-plus-circle" href="RestaurentAdd.zul" />
+						<navitem label="Update/Delete"
+							iconSclass="z-icon-edit" href="RestaurentAdd.zul" />
+
+					</nav>
+					<navitem label="Orders"
+						iconSclass="z-icon-clipboard" />
+					<navitem label="Customers"
+						iconSclass="z-icon-users" />
+				</navbar>
+			</vbox>
+
+		</div>
+<div sclass="table" id="red" use="com.pennant.admin.restcontrol" >
+ <vbox sclass="boxing">
+ <hbox sclass="hbox">
+<label value="Item" sclass="label"/>
+</hbox>
+<hbox>
+<label  value="MenuId"/> <space width="21px"/>
+<intbox id="menuID" width="150px" />
+</hbox>
+<hbox>
+<label  value="ItemName"/>  <space width="1px"/>
+<textbox id="itemName" width="150px" />
+</hbox>
+<hbox>
+<label  value="ItemPrice"/> <space width="7px"/>
+<intbox id="itemPrice" width="150px" />
+</hbox>
+<hbox>
+<label  value="ItemAvilability"/>
+<textbox id="itemAvailability"  width="150px" />
+</hbox>
+<hlayout>
+                            <button sclass="slide" label="ADD" onClick="red.itemadd()"
+                                width="130px" height="30px" />
+                        </hlayout>
+</vbox>
+ </div>
+</hbox>
+
+
+</zk>

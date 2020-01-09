@@ -1,0 +1,14 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<hlayout>
+
+
+<north height="150px">
+
+hi 
+<button label="ok"></button>
+
+</north>
+
+</hlayout>
+</zk>

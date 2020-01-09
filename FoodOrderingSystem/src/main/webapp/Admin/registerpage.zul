@@ -1,0 +1,129 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+<style>
+.z-label{
+color:white;
+}
+.z-window{
+ padding:0px;
+ }
+ .z-textbox{
+ color:black;
+ background-color:lightgrey;
+}
+.z-longbox{
+color:black;
+background-color:lightgrey;
+}
+.register{
+  background-color:white;
+ 
+  text-color:white;
+  
+}
+.slide{
+margin-left:112px;
+margin-right:80px;
+margin-top:20px;
+color:black;
+background-color:white;
+}
+.boxing{
+float:left;
+    margin-top: 72px;
+    margin-left: 65px;
+   background: rgba(0, 0,0, 0.3);
+  padding:20px;
+   box-shadow: 2px 2px 10px;
+   border-radius: 3px;
+}
+.sandeep{
+    width: 40%;
+    height: 65%;
+    margin-left:10px;
+ 
+  }
+ 
+  .pavan{
+  margin-left:120px;
+  margin-bottom:10px;
+  color:black;
+ }
+.z-combobox-input[readonly]+*, .z-bandbox-input[readonly]+*, .z-datebox-input[readonly]+*, .z-timebox-input[readonly]+*, .z-spinner-input[readonly]+*, .z-doublespinner-input[readonly]+* {
+    color: rgba(0,0,0,0.9);
+    background-color: #d3d3d3;
+}
+.z-combobox-input[readonly], .z-bandbox-input[readonly], .z-datebox-input[readonly], .z-timebox-input[readonly], .z-spinner-input[readonly], .z-doublespinner-input[readonly] {
+    color: rgba(0,0,0,0.9);
+    background: #d3d3d3;
+}
+ img { width: 157px; height: 110px;  margin-top: 15px; margin-left: 33px;}
+.z-a {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    margin-top: -42px;
+    margin-left: 322px;
+    color: #0093f9;
+}
+.z-a:visited {
+    color: #f2f2f2;
+}
+</style>
+
+<div id="reg" use="com.pennant.admin.control" sclass="register" Style="background-image:url('Lunch.jpg');background-repeat: no-repeat;-webkit-background-size: cover;
+  -moz-background-size: cover; -o-background-size: cover; background-size: cover;"  width="100%" height="100%">
+ <div><image src="foodlogo.png"  /></div>
+<vbox sclass="boxing" >
+<hbox sclass="pavan">
+Register
+</hbox>
+<hbox>
+
+<label id="fname" value="Firstname"/><space width="80px"></space>
+
+<textbox id="firstname"  width="150px" placeholder="Johnson"  constraint="no empty,/^[a-zA-Z]+$/ :please use Alphabets" />
+</hbox>
+<hbox>
+<label id="lname" value="Lastname"/><space width="80px"></space>
+<textbox id="lastname"  width="150px" placeholder="Tom" constraint="no empty,/^[a-zA-Z]+$/ :please use Alphabets" />
+</hbox>
+<hbox>
+<label  value="E-mail"/><space width="105px"></space>
+<textbox id="email" width="150px" placeholder="Pennant@tech.com"
+                constraint="/.+@.+\.[a-z]+/: Please enter  valid e-mail address" />
+</hbox>
+<hbox>
+<label  value="Phone"/><space width="103px"></space>
+<longbox id="phone" placeholder="9000000000" maxlength="10"  constraint="no empty, /[0-9]{10}/:Please enter valid Mobile Number" width="150px"  />
+</hbox>
+<hbox>
+<label value="Password"/><space width="80px"></space>
+<textbox id="password"  type="password" placeholder="password" constraint="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/ :Please enter valid Password" width="150px" />
+</hbox>
+<hbox>
+<label value="Confirm Password"/><space width="21px"></space>
+<textbox  id="cnfpswd" type="password" placeholder="Password" constraint="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/ :Password must match" width="150px"  />
+</hbox>
+<hbox>
+<label value="Security Question"/><space width="24px"></space>
+<combobox  id="security" sclass="durga" width="150px" readonly="true">
+            <comboitem label="What is your favourite dish?"/>
+            <comboitem label="What is your first School?"/>
+            <comboitem label="Who is your favourite Hero?"/>
+            <comboitem label="Which place do you like?"/>
+            </combobox> 
+</hbox>
+<hbox>
+<label  value="Answer"/><space width="95px"></space>
+ <textbox id="answer" type="text" placeholder="Answer" width="150px" constraint="no empty :mandatory"/> 
+</hbox>
+                         <hlayout>
+                            <button sclass="slide" label="Register" onClick="reg.verifyRegister()"
+                                width="130px" height="30px" />
+                        </hlayout>
+      <hbox>    <a href="login.zul"> Login</a></hbox>              
+</vbox>
+
+<separator/><separator/>
+</div>
+</zk>

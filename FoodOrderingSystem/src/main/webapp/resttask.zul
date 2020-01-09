@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<window id="restuarant" width="500px" 
+  use="com.pennant.admin.restpop" task="${arg.task}">
+  <style>
+  .z-label {
+    margin-top: 5px;
+    margin-left: 19px;
+    margin-right: 0px;
+    line-height: normal;
+    float: right;
+}
+  </style>
+	<vbox>
+		<grid width="410px" >
+		<columns>
+			<column width="200px"/>
+			<column width="200px"/>
+			
+		</columns>
+		<rows>
+			<row>
+				Restaurant Id: 
+				
+				<intbox id="Restaurant_Id" width="150px"  readonly="true"/>
+			</row>
+			<row>
+				Restaurant Name: 
+				
+				<textbox id="Restaurant_Name" width="150px"/>
+			</row>
+			<row>
+				Phone Number: 
+				<longbox id="PhoneNumber" width="150px"  constraint="no negative,no empty,no zero"/>
+			</row>
+			<row>
+				Location: 
+				<textbox id="Location" width="150px"/>
+			</row>
+		</rows>
+		</grid>
+		<hbox>
+			<button label="OK" onClick="restuarant.onOK()"/>
+			<button label="Cancle" onClick="restuarant.onCancel()"/>
+		</hbox>
+	</vbox>
+</window>

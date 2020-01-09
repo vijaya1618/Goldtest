@@ -1,0 +1,65 @@
+<?page title="Customerprofile" contentType="text/html;charset=UTF-8"?>
+<zk>
+<style>
+    .profile{
+       margin-left:0px;
+       margin-top:0px;
+     }
+     .boxing{
+       border-radius:0px;
+       float:left;
+       margin-top:50px;
+       margin-left:70px;
+       padding:30px;
+       box-shadow: 2px 2px 8px;
+       height:300px;
+       width:250px;
+     }
+     .button{
+       padding: 1px 7px;
+    }
+     .z-button{
+    background-color:#C74044 ;
+    color:white;
+    }
+    .rosh{
+    border-left:80px;
+    border-right:10px;
+   
+    }
+    
+</style>
+ <div id="customer"  Style="background-image:url('black.jpg'); background-repeat:no-repeat;background:cover;" width="100%" height="100%" use="com.pennant.admin.Customerprofilewnd">
+   <div class="profile" >
+       <vbox sclass="boxing">
+				<hbox>
+					<label value="Profile" style="font-family:Trebuchet MS; font-size: 30px;color:white"/>
+				</hbox>
+				<hbox>
+				    <button type="button" id="change" sclass="z-button" style=" margin-left: 270px;background-color:#C74044;" onClick="customer.onUpdate()">Edit</button>
+				</hbox><space  width="10px" />
+				<vlayout>
+				  <hbox>
+				     <label value="First Name:"  style="font-family: Georgia, serif;font-size: 20px;color:white" /><space  width="10px" />
+				    <space width="32px"></space>  <label id="firstname" style="font-family: Georgia, serif;font-size: 20px;color:white"/>
+				   </hbox>
+				   <hbox>
+				       <label value="Last Name:"  style="font-family: Georgia, serif;font-size: 20px;color:white" /><space  width="10px" />
+				   <space width="35px"></space>  <label id="lastname" style="font-family: Georgia, serif;font-size: 20px;color:white"/>
+				   </hbox>
+				   <hbox>
+				       <label sclass="rosh" value="Email:"  style="font-family: Georgia, serif;font-size: 20px;color:white" /><space  width="10px" />
+				   <space width="78px"></space>  <label id="email" style="font-family: Georgia, serif;font-size: 20px;color:white"/>
+				   </hbox>
+				   <hbox>
+				      <label value="phone Number:"  style="font-family: Georgia, serif;font-size: 20px;color:white" /><space  width="10px" />
+				     <label id="phone" style="font-family: Georgia, serif;font-size: 20px;color:white"/>
+				   </hbox><space  width="10px"/>
+				   <hlayout>
+				     <button type="button" id="Back" sclass="z-button" style=" margin-left: 10px;background-color:#C74044;">BACK</button>
+				   </hlayout>
+			   </vlayout>
+	   </vbox>
+   </div>
+</div>
+</zk>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?init class="com.pennant.authentication.Authentication"?>
+<window id="restuarant" width="500px" 
+  use="com.pennant.admin.restpop" task="${arg.task}">
+  <style>
+  .z-label {
+    margin-top: 5px;
+    margin-left: 19px;
+    margin-right: 0px;
+    line-height: normal;
+    float: right;
+}
+  </style>
+	<vbox>
+		<grid width="410px" >
+		<columns>
+			<column width="200px"/>
+			<column width="200px"/>
+			
+		</columns>
+		<rows>
+			<row>
+			<label value="Restaurant Id: " style="font-family: Georgia, serif;font-size: 18px;color:black"  />
+				
+				
+				<intbox id="Restaurant_Id" width="150px"  readonly="true"/>
+			</row>
+			<row>
+			<label value="Restaurant Name:" style="font-family: Georgia, serif;font-size: 18px;color:black"  />
+				 
+				
+				<textbox id="Restaurant_Name" width="150px" readonly="true"/>
+			</row>
+			<row>
+			<label value="Phone Number: " style="font-family: Georgia, serif;font-size: 18px;color:black"  />
+				
+				<longbox id="PhoneNumber" width="150px"  constraint="no negative,no empty,no zero"/>
+			</row>
+			<row>
+			<label value="Location:  " style="font-family: Georgia, serif;font-size: 18px;color:black"  />
+				
+				<textbox id="Location" width="150px"/>
+			</row>
+		</rows>
+		</grid>
+		<hbox>
+			<button label="OK" style="background-color:black ;font-family: Georgia, serif;font-size: 20px;color:white;margin-left:200px" onClick="restuarant.onOK()"/>
+			
+		</hbox>
+	</vbox>
+</window>

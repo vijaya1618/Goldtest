@@ -1,0 +1,71 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?init class="com.pennant.authentication.Authentication"?>
+<zk>
+<window id="OrdersWnd" title="Orders Update"  position="top,center" border="normal" width="530px" 
+  use="com.pennant.admin.OrdersWnd" Orders="${arg.Orders}">
+  <style>
+  .z-button {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    color: #fff;
+    min-height: 24px;
+    border: 2px solid transparent;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    -ms-border-radius: 4px;
+    
+    border-radius: 4px;
+    padding: 8px 16px;
+    line-height: 16px;
+    background-color: #0093f9;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    -o-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    -ms-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16);
+    cursor: pointer;
+    white-space: nowrap;
+    }
+   .z-label {
+    margin-top: 4px;
+    margin-left: 0px;
+    margin-right: 37px;
+    line-height: normal;
+    float: right;
+    }
+   </style>
+	<vbox>
+		<grid width="455px">
+		<columns>
+			<column width="200px"/>
+			<column width="250px"/>
+		</columns>
+		<rows>
+			<row>
+			<label  value="Order Id: "  style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 20px;color:black" />
+				
+				<intbox id="Order_Id" width="150px" readonly="true"/>
+			</row>
+			
+			<row>
+			<label  value="Status:  "  style="font-family: Helvetica Neue,Helvetica,Arial,sans-serif; font-size: 20px;color:black" />
+			
+				<combobox id="Status" width="200px">
+				<comboitem label="Confirmed" value="Confirmed"/>
+				<comboitem label="Food Preparing" value="Food Preparing"/>
+				<comboitem label="Pickuped" value="Pickuped"/>
+				<comboitem label="Delivered" value="Delivered"/>
+				</combobox>
+			</row>
+		</rows>
+		</grid>
+		<hbox>
+			 <button label="Ok" style="background-color:black;font-family:Georgia, serif;font-size: 20px;color:white;margin-left:200px" onClick="OrdersWnd.onOK()"/>
+			
+		</hbox>
+	</vbox>
+</window>
+</zk>

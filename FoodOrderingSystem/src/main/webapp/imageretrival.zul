@@ -1,0 +1,7 @@
+<zk>
+
+<window title="new page title" border="normal" id="click" use="com.pennant.admin.blobretrivalcontrol">
+ 
+<image id="image" ></image>
+</window>
+</zk>

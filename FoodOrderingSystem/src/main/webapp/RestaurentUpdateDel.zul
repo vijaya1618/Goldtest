@@ -1,0 +1,119 @@
+
+<zk>
+<style>
+.header{
+width:1418px;
+height:13%;
+background:#93abbb;
+padding:0px;
+margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    position: relative;
+}
+img{
+margin-left:25px;
+width:115px;
+height:100px;
+}
+.z-label{
+margin-top:50px;
+margin-left:50px;
+margin-right:27px;
+    line-height: normal;
+    float: right;
+    }
+
+.z-navitem-content {
+    color: #333;
+    display: block;
+    height: 40px;
+    border: 1px solid #f4f4f3;
+    padding: 0 8px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    width: 143px;
+    line-height: 32px;
+}
+.table{
+margin-left:200px;
+margin-top:30px;
+width:550px;
+ height:100px;
+}
+.navbar{
+		  width: 100%;
+		 height: 100%;
+		  background:#93abbb;  
+		}
+   .z-hbox{ height: 100%;}
+   .z-button{
+   background:#91a5b3;
+   }
+   .z-column{
+   background:black;
+   }
+     .z-listheader {
+background:#93abbb;
+}
+.z-button{
+margin-left:100px;
+}
+</style>
+
+<div sclass="header">
+<div ><image src="foodlogo.png"/>
+<label value="Logout" /><space /><label value="Profile" />
+</div>
+</div>
+<hbox>
+	<div sclass="navbar">
+			<vbox width="25px" height="100px">
+				<navbar orient="vertical" collapsed="false">
+					<navitem label="Dashboard"
+						iconSclass="z-icon-dashboard" />
+					<nav label="Restuarants"
+						iconSclass="z-icon-coffee">
+						<navitem label="Add"
+							iconSclass="z-icon-plus-circle" />
+						<navitem label="Update/Delete"
+							iconSclass="z-icon-edit" />
+
+					</nav>
+					<navitem label="Orders"
+						iconSclass="z-icon-clipboard" />
+					<navitem label="Customers"
+						iconSclass="z-icon-users" />
+				</navbar>
+			</vbox>
+
+		</div>
+<div sclass="table" id="rest"  use="com.pennant.admin.restuarantupdel">
+<vbox>
+  <listbox id="restuarantUpdDel" width="600px" rows="2">
+		<listhead>
+			<listheader label="Restuarant Id" style="background-color=black"/>
+			<listheader label="RestaurantName"  />
+			<listheader label="Phone"/>
+			<listheader label="Location"/>
+		</listhead>
+		<listitem>
+			<listcell id="Restuarantid" ></listcell>
+            <listcell id="RestaurantName" label=" "  />
+            <listcell id="PhoneNumber" label=" " />
+            <listcell id="Location" label=" " />
+        </listitem>
+	</listbox>
+	<hbox align="center">
+		
+		<button label="Update..." onClick="rest.onUpdate()"/>
+		<button label="Delete" onClick="rest.onDelete()"/>
+	</hbox>
+	</vbox>
+ </div>
+
+
+  </hbox>
+</zk>
